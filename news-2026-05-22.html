@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News Summary — 22 May 2026</title>
+  <style>
+    :root {
+      --dark: #0f1b2d; --blue: #0032A0; --light: #e8edf5;
+      --mid: #c5d0e6; --green: #1a7a4a; --amber: #d4820a;
+      --red: #c0392b; --text: #1a1a2e; --muted: #5a6a7a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Calibri, sans-serif; background: var(--light); color: var(--text); font-size: 14px; }
+
+    .header {
+      background: var(--dark);
+      background-image: linear-gradient(135deg, #0f1b2d 0%, #1a2f4e 100%);
+      color: #fff; padding: 28px 36px 24px;
+      border-bottom: 4px solid var(--blue);
+    }
+    .header-top { display: flex; align-items: center; gap: 14px; margin-bottom: 6px; }
+    .badge { background: var(--blue); color: #fff; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; }
+    .header h1 { font-size: 22px; font-weight: 700; }
+    .header-meta { font-size: 12px; color: var(--mid); margin-top: 4px; }
+
+    .body { padding: 28px 36px 48px; max-width: 1100px; }
+
+    .news-category { background: #fff; border-radius: 12px; padding: 20px 24px; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 16px; }
+    .category-title {
+      font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 14px;
+      padding: 8px 14px; border-radius: 8px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .category-title.malaysia { background: linear-gradient(135deg, #0032A0, #0050c8); }
+    .category-title.global   { background: linear-gradient(135deg, #1a7a4a, #22a86a); }
+    .category-title.iranus  { background: linear-gradient(135deg, #c0392b, #e74c3c); }
+    .category-title.tech    { background: linear-gradient(135deg, #6c3483, #9b59b6); }
+
+    .news-item { border-left: 3px solid var(--mid); padding: 10px 14px; margin-bottom: 10px; background: #f4f7fc; border-radius: 6px; }
+    .news-item:last-child { margin-bottom: 0; }
+    .news-headline { font-size: 14px; font-weight: 700; color: var(--dark); margin-bottom: 4px; line-height: 1.4; }
+    .news-meta { font-size: 11px; color: var(--muted); margin-bottom: 6px; }
+    .news-summary { font-size: 13px; color: var(--text); line-height: 1.6; }
+    .news-source { font-size: 11px; font-weight: 700; color: var(--blue); margin-top: 4px; }
+
+    .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
+    .stat-card { background: #fff; border-radius: 10px; padding: 16px 18px; box-shadow: 0 1px 4px rgba(0,0,0,.08); border-top: 4px solid var(--blue); }
+    .stat-card.g { border-top-color: var(--green); }
+    .stat-card.a { border-top-color: var(--amber); }
+    .stat-card.r { border-top-color: var(--red); }
+    .stat-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+    .stat-value { font-size: 20px; font-weight: 700; color: var(--dark); }
+
+    @media (max-width: 700px) { .stat-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .header { padding: 20px 20px 16px; } .body { padding: 20px 20px 36px; } }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div style="margin-bottom:10px">
+    <a href="index.html" style="color:#fff;font-size:12px;font-weight:700;text-decoration:none;background:var(--blue);padding:5px 12px;border-radius:6px;">← Back to Index</a>
+  </div>
+  <div class="header-top">
+    <span class="badge">NEWS</span>
+    <h1>News Summary — 22 May 2026</h1>
+  </div>
+  <div class="header-meta">Auto-generated from get-news skill · Last 24 hours · Generated 22 May 2026, 6:00 AM MYT</div>
+</div>
+
+<div class="body">
+
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="stat-label">🇲🇾 Malaysia</div>
+      <div class="stat-value" id="cnt-my">—</div>
+    </div>
+    <div class="stat-card g">
+      <div class="stat-label">🌍 Global</div>
+      <div class="stat-value" id="cnt-gl">5</div>
+    </div>
+    <div class="stat-card a">
+      <div class="stat-label">⚔️ Iran-US</div>
+      <div class="stat-value" id="cnt-iran">1</div>
+    </div>
+    <div class="stat-card r">
+      <div class="stat-label">🤖 Tech/AI</div>
+      <div class="stat-value" id="cnt-tech">4</div>
+    </div>
+  </div>
+
+  <!-- Malaysia Section -->
+  <div class="news-category">
+    <div class="category-title malaysia">🇲🇾 Malaysia</div>
+    <div id="news-malaysia">
+      <div class="news-item">
+        <div class="news-headline">Limited Malaysia-specific headlines captured — Reuters/New Straits Times inaccessible from this feed. Broader national stories drawn from Reuters/BBC World.</div>
+        <div class="news-meta">22 May 2026</div>
+        <div class="news-summary">Malaysia local news sources (Malay Mail, Reuters MY) were unavailable during this fetch cycle. For full national coverage, check RTM, Bernama, or The Star Nation section directly.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Section -->
+  <div class="news-category">
+    <div class="category-title global">🌍 Global</div>
+    <div id="news-global">
+      <div class="news-item">
+        <div class="news-headline">Air France and Airbus found guilty of manslaughter over 2009 plane crash</div>
+        <div class="news-meta">BBC News · 6 hours ago</div>
+        <div class="news-summary">A French court found Air France and Airbus guilty of manslaughter over the Air France Flight 447 disaster which killed 228 people. The crash occurred over the Atlantic in 2009.</div>
+        <div class="news-source">Source: BBC News</div>
+      </div>
+      <div class="news-item">
+        <div class="news-headline">Russia and China condemn US over indictment of former Cuban leader Raúl Castro</div>
+        <div class="news-meta">BBC News · 5 hours ago</div>
+        <div class="news-summary">The US charged former Cuban leader Raúl Castro with murder and conspiracy to kill US nationals over the downing of two civilian aircraft in 1996. Russia and China have condemned the indictment.</div>
+        <div class="news-source">Source: BBC News</div>
+      </div>
+      <div class="news-item">
+        <div class="news-headline">Three ways Cuba crisis could play out after Raúl Castro indictment</div>
+        <div class="news-meta">BBC News · 3 hours ago</div>
+        <div class="news-summary">Analysts examine options as the Trump administration puts heavy economic pressure on Cuba's Communist government following the DOJ's charges against former leader Raúl Castro.</div>
+        <div class="news-source">Source: BBC News</div>
+      </div>
+      <div class="news-item">
+        <div class="news-headline">Net migration to UK falls by nearly 50% amid tighter policies</div>
+        <div class="news-meta">Al Jazeera · 21 May 2026</div>
+        <div class="news-summary">The ONS reports net migration to the UK fell to 171,000 in the 12 months to December, down from 331,000 a year earlier — a nearly 50% drop driven by stricter policies.</div>
+        <div class="news-source">Source: Al Jazeera</div>
+      </div>
+      <div class="news-item">
+        <div class="news-headline">Putin and Lukashenko monitor joint Russia-Belarus nuclear exercises</div>
+        <div class="news-meta">Al Jazeera · 21 May 2026</div>
+        <div class="news-summary">Moscow and Minsk held strategic nuclear drills with both leaders participating via video conference, in a show of coordinated deterrence amid heightened tensions with the West.</div>
+        <div class="news-source">Source: Al Jazeera</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Iran-US Section -->
+  <div class="news-category">
+    <div class="category-title iranus">⚔️ Iran-US Conflict</div>
+    <div id="news-iranus">
+      <div class="news-item">
+        <div class="news-headline">Iran steps up claim to control Strait of Hormuz</div>
+        <div class="news-meta">BBC News · 21 May 2026</div>
+        <div class="news-summary">Iran has intensified its claims over the Strait of Hormuz — a critical global oil shipping route — raising tensions with the US and its allies. Any disruption to passage through the strait would have major implications for global energy markets.</div>
+        <div class="news-source">Source: BBC News</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tech/AI Section -->
+  <div class="news-category">
+    <div class="category-title tech">🤖 Technology & AI</div>
+    <div id="news-tech">
+      <div class="news-item">
+        <div class="news-headline">Nvidia's revenue blows past Wall Street expectations as AI boom accelerates</div>
+        <div class="news-meta">The Guardian · 21 May 2026</div>
+        <div class="news-summary">Nvidia posted results far exceeding analyst expectations, reinforcing its position as the dominant chip supplier for AI workloads. Analysts view the company's performance as a broader referendum on the pace of global AI buildout.</div>
+        <div class="news-source">Source: The Guardian</div>
+      </div>
+      <div class="news-item">
+        <div class="news-headline">Spotify and Universal Music agree deal to let subscribers create AI remixes</div>
+        <div class="news-meta">The Guardian · 21 May 2026</div>
+        <div class="news-summary">In a landmark agreement, Spotify and Universal Music have cleared the way for AI-generated remixes of copyrighted tracks, creating a new framework for AI music creation with proper licensing.</div>
+        <div class="news-source">Source: The Guardian</div>
+      </div>
+      <div class="news-item">
+        <div class="news-headline">AI will help make a Nobel prize-winning discovery within a year — Anthropic co-founder</div>
+        <div class="news-meta">The Guardian · 21 May 2026</div>
+        <div class="news-summary">Anthropic co-founder Jack Clark says AI systems are advancing with a "vertiginous sense of progress" and predicts a Nobel-level discovery enabled by AI within the next year, describing the changes as "profound."</div>
+        <div class="news-source">Source: The Guardian</div>
+      </div>
+      <div class="news-item">
+        <div class="news-headline">Google DeepMind in talks with UK unions amid staff concern over US and Israel's AI use</div>
+        <div class="news-meta">The Guardian · 21 May 2026</div>
+        <div class="news-summary">Google DeepMind is actively negotiating with UK unions as employees raise concerns about how its AI technology is being used by US and Israeli military or government clients.</div>
+        <div class="news-source">Source: The Guardian</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;padding:20px 36px;font-size:12px;color:var(--muted);border-top:1px solid var(--mid);margin-top:8px">
+    Generated by OpenClaw get-news skill · <span id="gen-time">22 May 2026, 6:00 AM MYT</span>
+  </div>
+</div>
+
+<script>
+  document.getElementById('gen-time').textContent = new Date().toLocaleString('en-MY', {timeZone:'Asia/Kuala_Lumpur'});
+</script>
+</body>
+</html>
