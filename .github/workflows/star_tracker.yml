@@ -1,0 +1,91 @@
+name: Star Tracker
+
+on:
+  schedule:
+    # Every 15 minutes — well within GitHub's 60k exec/month free limit
+    - cron: '*/15 * * * *'
+  workflow_dispatch:  # Manual trigger
+  push:
+    paths:
+      - '.github/workflows/star_tracker.yml'
+
+jobs:
+  fetch-and-update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Fetch star data from GitHub API
+        id: fetch
+        run: |
+          # List of repos to track
+          REPOS=(
+            "anomalyco/opencode"
+            "openclaw/openclaw"
+            "NousResearch/hermes-agent"
+            "HKUDS/nanobot"
+          )
+
+          DATA='[]'
+
+          for REPO in "${REPOS[@]}"; do
+            RESP=$(curl -s -w "\n%{http_code}" "https://api.github.com/repos/${REPO}")
+            BODY=$(echo "$RESP" | head -n -1)
+            CODE=$(echo "$RESP" | tail -n 1)
+
+            if [ "$CODE" != "200" ]; then
+              echo "⚠ Failed to fetch $REPO (HTTP $CODE): $(echo "$BODY" | jq -r '.message // empty')" >&2
+              # Set partial data with a flag
+              STARS=0
+              FORKS=0
+              DESC="Unavailable (HTTP $CODE)"
+              OWNER=$(echo "$REPO" | cut -d/ -f1)
+              REPO_NAME=$(echo "$REPO" | cut -d/ -f2)
+            else
+              STARS=$(echo "$BODY" | jq '.stargazers_count // 0')
+              FORKS=$(echo "$BODY" | jq '.forks_count // 0')
+              DESC=$(echo "$BODY" | jq -r '.description // "No description"')
+              OWNER=$(echo "$BODY" | jq -r '.owner.login // ""')
+              REPO_NAME=$(echo "$BODY" | jq -r '.name // ""')
+            fi
+
+            # Escape description for JSON
+            ESCAPED_DESC=$(echo "$DESC" | python3 -c 'import sys,json; print(json.dumps(sys.stdin.read().strip()))')
+
+            DATA=$(echo "$DATA" | jq \
+              --arg owner "$OWNER" \
+              --arg repo "$REPO_NAME" \
+              --argjson stars "$STARS" \
+              --argjson forks "$FORKS" \
+              --arg desc "$(echo "$DESC")" \
+              '. + [{
+                "owner": $owner,
+                "repo": $repo,
+                "stars": $stars,
+                "forks": $forks,
+                "description": $desc
+              }]')
+          done
+
+          NOW=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          echo "$DATA" | jq --arg now "$NOW" '{ lastUpdated: $now, repos: . }' > star_data.json
+
+          echo "✅ Wrote star_data.json"
+          cat star_data.json
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add star_data.json
+          if git diff --cached --quiet; then
+            echo "ℹ No changes to commit"
+          else
+            git commit -m "chore: update star tracker data [skip ci]"
+            git push
+            echo "✅ Pushed updated star_data.json"
+          fi

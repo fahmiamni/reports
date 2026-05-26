@@ -385,7 +385,7 @@
       { name: 'NanoBot',      owner: 'HKUDS',             repo: 'nanobot',        icon: '🐈',   accent: 'accent-amber' },
     ];
 
-    const GITHUB_API = 'https://api.github.com/repos';
+    const DATA_URL = 'star_data.json';
     const REFRESH_MS = 60000;
 
     let dataCache = null;
@@ -408,7 +408,6 @@
 
       function step(now) {
         const progress = Math.min((now - start) / duration, 1);
-        // Ease out cubic
         const eased = 1 - Math.pow(1 - progress, 3);
         const value = Math.round(current + (target - current) * eased);
         el.textContent = fullNumber(value) + suffix;
@@ -460,84 +459,88 @@
       });
     }
 
-    // ── Fetch All Repos ──
-    async function fetchAll() {
-      const results = [];
-      for (const r of REPOS) {
-        try {
-          const res = await fetch(`${GITHUB_API}/${r.owner}/${r.repo}`);
-          if (!res.ok) throw new Error(`HTTP ${res.status}`);
-          const data = await res.json();
-          results.push({ ...r, data });
-        } catch (e) {
-          results.push({ ...r, error: e.message });
+    // ── Fetch Star Data (from static JSON) ──
+    async function fetchStarData() {
+      try {
+        const res = await fetch(DATA_URL);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const json = await res.json();
+        if (!json || !json.repos || !Array.isArray(json.repos)) {
+          throw new Error('Invalid data format');
         }
+        return json;
+      } catch (e) {
+        console.error('Failed to fetch star_data.json:', e);
+        return { lastUpdated: null, repos: [] };
       }
-      return results;
     }
 
     // ── Update UI ──
-    function updateUI(results) {
-      const errors = results.filter(r => r.error);
+    function updateUI(data) {
       const statusDot = document.getElementById('statusDot');
       const statusText = document.getElementById('statusText');
 
-      if (errors.length > 0) {
+      const validRepos = data.repos.filter(r => r.stars !== undefined && r.stars !== null);
+      const hasData = validRepos.length > 0;
+
+      if (!hasData) {
         statusDot.className = 'status-dot error';
-        statusText.textContent = `${errors.length} error(s) — check console`;
+        statusText.textContent = 'No data available';
       } else {
         statusDot.className = 'status-dot';
         statusText.textContent = 'All live';
       }
 
       // Sort by stars for ranking
-      const valid = results.filter(r => r.data && r.data.stargazers_count !== undefined);
-      const sorted = [...valid].sort((a, b) => b.data.stargazers_count - a.data.stargazers_count);
+      const sorted = [...validRepos].sort((a, b) => b.stars - a.stars);
 
       // Summary
-      if (valid.length > 0) {
-        const total = valid.reduce((s, r) => s + r.data.stargazers_count, 0);
-        const top = sorted[0];
-        const avg = Math.round(total / valid.length);
+      if (hasData) {
+        const total = validRepos.reduce((s, r) => s + r.stars, 0);
+        const topRepoName = REPOS.find(r => r.owner === sorted[0].owner && r.repo === sorted[0].repo);
+        const avg = Math.round(total / validRepos.length);
 
         animateCount(document.getElementById('totalStars'), total);
-        document.getElementById('topRepo').textContent = top.name;
+        document.getElementById('topRepo').textContent = topRepoName ? topRepoName.name : sorted[0].repo;
         animateCount(document.getElementById('avgStars'), avg);
       }
 
-      const now = new Date();
-      document.getElementById('lastUpdated').textContent =
-        'Updated: ' + now.toLocaleTimeString();
+      // Last updated from the data file's timestamp
+      if (data.lastUpdated) {
+        const d = new Date(data.lastUpdated);
+        document.getElementById('lastUpdated').textContent =
+          'Data: ' + d.toLocaleString();
+      } else {
+        document.getElementById('lastUpdated').textContent = 'N/A';
+      }
 
       // Per-repo cards
-      results.forEach(r => {
-        const card = document.getElementById(`card-${r.owner}-${r.repo}`);
-        if (!card) return;
+      REPOS.forEach(r => {
+        const repoData = validRepos.find(d => d.owner === r.owner && d.repo === r.repo);
 
-        if (r.error) {
+        if (!repoData) {
           document.getElementById(`stars-${r.owner}-${r.repo}`).innerHTML =
-            `<span style="color:var(--red);font-size:18px;">⚠ Error</span>`;
+            `<span style="color:var(--red);font-size:18px;">⚠ No Data</span>`;
           document.getElementById(`desc-${r.owner}-${r.repo}`).textContent =
-            `Failed to fetch: ${r.error}`;
+            'Repository data not available from cache';
           return;
         }
 
-        const d = r.data;
         // Stars with animation
         const starEl = document.getElementById(`stars-${r.owner}-${r.repo}`);
-        animateCount(starEl, d.stargazers_count);
+        animateCount(starEl, repoData.stars);
 
         // Forks
         document.getElementById(`forks-${r.owner}-${r.repo}`).textContent =
-          '🍴 ' + fullNumber(d.forks_count) + ' forks';
+          '🍴 ' + fullNumber(repoData.forks) + ' forks';
 
         // Description
         document.getElementById(`desc-${r.owner}-${r.repo}`).textContent =
-          d.description || 'No description';
+          repoData.description || 'No description';
 
         // Loading bar — animate based on stars relative to max
-        const maxStars = sorted.length > 0 ? sorted[0].data.stargazers_count : 1;
-        const pct = Math.min((d.stargazers_count / maxStars) * 100, 100);
+        const maxStars = sorted.length > 0 ? sorted[0].stars : 1;
+        const pct = Math.min((repoData.stars / maxStars) * 100, 100);
         const bar = document.getElementById(`bar-${r.owner}-${r.repo}`);
         bar.style.width = pct + '%';
 
@@ -553,9 +556,9 @@
 
     // ── Main Loop ──
     async function refresh() {
-      const results = await fetchAll();
-      updateUI(results);
-      dataCache = results;
+      const data = await fetchStarData();
+      updateUI(data);
+      dataCache = data;
     }
 
     // ── Init ──
@@ -563,6 +566,5 @@
     refresh();
     setInterval(refresh, REFRESH_MS);
   </script>
-
 </body>
 </html>
