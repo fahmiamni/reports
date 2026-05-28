@@ -4,16 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>News Briefing — 29 May 2026</title>
+  <meta name="description" content="Daily news briefing covering Malaysia, Global, Iran-US, and Tech/AI news for 29 May 2026." />
   <style>
     :root {
       --dark:   #0f1b2d;
       --blue:   #0032A0;
       --light:  #e8edf5;
       --mid:    #c5d0e6;
-      --green:  #1a7a4a;
-      --amber:  #d4820a;
       --red:    #c0392b;
+      --amber:  #d4820a;
       --purple: #6b21a8;
+      --green:  #1a7a4a;
       --text:   #1a1a2e;
       --muted:  #5a6a7a;
       --oc:     #ff6b35;
@@ -35,22 +36,25 @@
       padding: 32px 40px 28px;
       border-bottom: 4px solid var(--blue);
     }
+
     .back-link {
       display: inline-block;
       color: var(--mid);
       font-size: 13px;
       text-decoration: none;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       transition: color 0.2s;
     }
     .back-link:hover {
       color: #fff;
     }
+
     .header h1 {
-      font-size: 24px;
+      font-size: 26px;
       font-weight: 700;
       letter-spacing: -0.3px;
     }
+
     .header-meta {
       font-size: 13px;
       color: var(--mid);
@@ -58,27 +62,29 @@
     }
 
     .body {
-      padding: 32px 40px 60px;
       max-width: 960px;
       margin: 0 auto;
+      padding: 36px 24px 60px;
     }
 
     .category {
-      margin-bottom: 40px;
+      margin-bottom: 44px;
     }
 
     .cat-header {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       margin-bottom: 16px;
       padding-bottom: 10px;
       border-bottom: 2px solid var(--mid);
     }
-    .cat-icon {
-      font-size: 26px;
+
+    .cat-emoji {
+      font-size: 24px;
       line-height: 1;
     }
+
     .cat-title {
       font-size: 14px;
       font-weight: 700;
@@ -87,59 +93,66 @@
       color: var(--dark);
     }
 
-    .article-card {
+    .cat-count {
+      margin-left: auto;
+      background: var(--mid);
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+
+    .article {
       background: #fff;
       border-radius: 8px;
       padding: 20px 24px;
       margin-bottom: 14px;
-      border-left: 4px solid var(--blue);
       box-shadow: 0 1px 5px rgba(0,0,0,.06);
+      border-left: 4px solid var(--blue);
     }
-    .article-card.accent-red {
-      border-left-color: var(--red);
-    }
-    .article-card.accent-amber {
-      border-left-color: var(--amber);
-    }
-    .article-card.accent-purple {
-      border-left-color: var(--purple);
-    }
-    .article-card.accent-green {
-      border-left-color: var(--green);
-    }
+
+    .article.accent-red    { border-left-color: var(--red); }
+    .article.accent-amber  { border-left-color: var(--amber); }
+    .article.accent-purple { border-left-color: var(--purple); }
+    .article.accent-green  { border-left-color: var(--green); }
 
     .article-title {
       font-size: 16px;
       font-weight: 700;
       color: var(--dark);
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       line-height: 1.4;
     }
+
     .article-title a {
       color: var(--dark);
       text-decoration: none;
-      transition: color 0.2s;
     }
+
     .article-title a:hover {
       color: var(--blue);
       text-decoration: underline;
     }
+
     .article-source {
       font-size: 11px;
       color: var(--muted);
-      font-weight: 600;
-      letter-spacing: 0.5px;
       text-transform: uppercase;
+      letter-spacing: 0.5px;
       margin-bottom: 10px;
     }
+
     .article-summary {
       font-size: 14px;
-      color: var(--text);
       line-height: 1.65;
+      color: var(--text);
     }
 
     .footer {
-      padding: 24px 40px;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 24px;
       border-top: 1px solid var(--mid);
       font-size: 12px;
       color: var(--muted);
@@ -148,219 +161,223 @@
 
     @media (max-width: 700px) {
       .header { padding: 24px 20px 20px; }
-      .header h1 { font-size: 20px; }
-      .body { padding: 20px 20px 40px; }
-      .article-card { padding: 16px 18px; }
-      .footer { padding: 20px 24px; }
+      .header h1 { font-size: 21px; }
+      .body { padding: 24px 16px 40px; }
+      .article { padding: 16px 18px; }
+      .article-title { font-size: 15px; }
     }
   </style>
 </head>
 <body>
 
   <div class="header">
-    <a class="back-link" href="index.html">&#8592; Back to Index</a>
-    <h1>&#x1F4F0; News Briefing &mdash; 29 May 2026</h1>
-    <div class="header-meta">Malaysia &middot; Global &middot; Iran-US &middot; Tech/AI &mdash; curated from Google News</div>
+    <a class="back-link" href="index.html">&larr; Back to Index</a>
+    <h1>📰 News Briefing — 29 May 2026</h1>
+    <div class="header-meta">Malaysia · Global · Iran-US Conflict · Technology &amp; AI — Friday, 29 May 2026</div>
   </div>
 
   <div class="body">
 
-    <!-- 🇲🇾 MALAYSIA -->
+    <!-- ====== Malaysia ====== -->
     <div class="category">
       <div class="cat-header">
-        <span class="cat-icon">&#x1F1F2;&#x1F1FE;</span>
-        <span class="cat-title">Malaysia</span>
+        <span class="cat-emoji">🇲🇾</span>
+        <span class="cat-title">Malaysia News</span>
+        <span class="cat-count">5 articles</span>
       </div>
 
-      <div class="article-card">
+      <div class="article">
         <div class="article-title">
-          <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTFBQcHhsYllBbXBiamloX2xnNlVxXzBQUXBwM3FSaGZ5blNqZ3lyZXEzMHRBVGJXbGFWSjhZcG1fR0lXUktENm91OFJvcEdxZ0Nf?oc=5" target="_blank" rel="noopener">Maybank starts 2026 a tad softer as sharply lower markets gain drags</a>
+          <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE0wUVNSSjRpdk1ockE0cDlQQk5ZNm4zMFBQNkI0dlV3Yno5WVRmQmxrd1FOMDZMUHZyV2pNVHNsUWNqb24yaDVreUUwbzlvamp4?oc=5" target="_blank" rel="noopener">Maybank, Matrix Concepts, UOA Development, AmBank, Insas, Inari Amertron Bhd, Hengyuan, Mulpha, Malayan Cement, IJM, Press Metal Aluminium, Pharmaniaga, MBSB, YTL Corp, Berjaya Corp, IOI Properties, Supermax</a>
         </div>
         <div class="article-source">The Edge Malaysia</div>
-        <div class="article-summary">Maybank, Malaysia's largest bank by assets, entered the second half of 2026 on a softer footing as declining global equity markets weighed on its investment portfolio. The bank's performance reflects broader regional weakness, with lower commodity prices and geopolitical uncertainties damping investor sentiment across Southeast Asian financial stocks.</div>
+        <div class="article-summary">The Edge Malaysia published a comprehensive rundown of prominent Malaysian stocks making headlines today, covering a broad cross-section of Bursa Malaysia-listed companies spanning banking (Maybank, AmBank), property (Matrix Concepts, UOA Development, IOI Properties), technology (Inari Amertron), construction (IJM), and healthcare (Pharmaniaga, Supermax). The list signals active trading interest across multiple sectors as investors reposition portfolios amid shifting macroeconomic conditions. Notable movers include YTL Corp and Press Metal Aluminium alongside oil-related counters like Hengyuan, reflecting the market's broad-based activity.</div>
       </div>
 
-      <div class="article-card">
+      <div class="article">
         <div class="article-title">
           <a href="https://news.google.com/rss/articles/CBMiywFBVV95cUxNMFlYNjdYY0RlYzl0cG5odW1sb25ocndLRUY3eTI2TTh4V1VUaFUxWlZRY25mU2UtaXIxRVJxTEk5eFpvdVFFOXRoWFIzNHZvaGVPMmNiX2tlZmVYLWZQSXNkVGlTY05FMlZFZlVuYldNcDJlN3RwTHAzOHBzTG0yTGR2T096RkUwTnA3UWoyYnp6bFVvSktNUFZTT1JWRlNrMzk0Q3dnSWMyQ0o1VFViX1RoNzB3S0FGNFZqaUZMeDJGcVVrcXItc3JjWQ?oc=5" target="_blank" rel="noopener">Bursa Malaysia lower at midday amid weaker regional market performance</a>
         </div>
         <div class="article-source">The Star</div>
-        <div class="article-summary">Bursa Malaysia extended its decline at midday trading, tracking weaker performances across Asian bourses as risk-averse sentiment dominated regional markets. The dip was driven by ongoing Middle East instability and concerns over rising global interest rates, which have prompted foreign investors to pull capital from emerging markets including Malaysia.</div>
+        <div class="article-summary">Bursa Malaysia's benchmark index traded in negative territory at midday, tracking a broader regional sell-off as investor sentiment soured across Asian markets. The decline reflects ongoing concerns over global economic headwinds and persistent geopolitical tensions that have dampened risk appetite. Market participants are monitoring central bank cues and external trade developments for direction in the afternoon session.</div>
       </div>
 
-      <div class="article-card">
+      <div class="article">
         <div class="article-title">
           <a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxQeXVFY2QxYW1GSU1xTDVmdDMyZDBhMDlUem44Y2tSaGF3RjdyeE1kdGVxR092YVh5MER6dmZFbmJsRU9wNEVKWTB1UUxVeDZiNmZrekpMbUhEZmFncGxqNHloY1ZiM2djeW9FajFrTVIxbmd6QUQtNERTazd2Sm9TUTZYcGFxSGxKX01XWnJHb3FGY0lndy15MkQ5dFh4ejY2N2JEX1J5ZjI3TnZYcWx6R082X2VwQzRPbGpFWlZXWnVlTHFZVUlpQjRKMnV4RDRkcmJB?oc=5" target="_blank" rel="noopener">Rebound on Bursa Malaysia fizzles as Middle East conflict remains unresolved</a>
         </div>
         <div class="article-source">The Star</div>
-        <div class="article-summary">An attempted rebound on Bursa Malaysia failed to sustain momentum as the ongoing Iran-US conflict continued to cast a shadow over regional markets. Investors had hoped for a recovery rally following recent losses, but lingering geopolitical uncertainty and the risk of further supply chain disruptions in the energy sector kept buying activity subdued throughout the session.</div>
+        <div class="article-summary">An early recovery on Bursa Malaysia lost momentum and faded by midday as uncertainty over the unresolved Middle East conflict continued to weigh on investor confidence. Traders had initially pushed indices higher on bargain-hunting, but the gains proved unsustainable without a clear resolution to geopolitical tensions affecting global oil prices and supply chains. The stalled rebound highlights the market's sensitivity to developments in the Iran-US situation.</div>
       </div>
 
-      <div class="article-card">
+      <div class="article">
         <div class="article-title">
-          <a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxOdzJRVzNBaWJublB4Wkp1UFByRW5OZlktWGJBSXBGVkRlQ1AzMVVkSWV6OW1LWHVEcFloWlNtN1ZUbllwWWNWb2dlY1d2bzdUVkt3R0didGxETnpSUE5MZ2F3c3hIamNOQld1VmNpRlEwMHZMcjBBeDVVVnY5eEtUai1BaHlwNndJU0xLc1NlaUFPSjlqR08yekhlam13QXRXWTY0bnIyTnhPMXNfZ081MjYydUpucmvSAbwBQVVfeXFMTjN4Si10VXdXaVJzaGFCcno1dVZQQUJtdlVkeXhjendFOWlaT0tJX3Rvc1d0Sjl4dEFRc0h1MTlyRE5vRkxqUHMyTnNZRzd6TGttZ0l1MDhRSV9CXzg1YWhYZjUzQjhGTTJwcXB2cHNHOWlwMktOVF9ZOExPcndxblRxb1o5NkRqTXJNMFFiZXhRbmtYTWhIbUZ4b0xLM3BDMHpiRjdYS01xX3FITk15TkNMUDBTSHdJRGdsX1U?oc=5" target="_blank" rel="noopener">Bursa Malaysia extends losses amid heightened geopolitical tensions</a>
+          <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE9KYm4xU3Z4RzhmMWI0bmxhdTRwR0hyczV6TzFiNi16X25TZ0RkQ1pDUnp0cnVoaVU0SEpraDM5VGFZTUZIUzkwWnZPcXBEMUVr?oc=5" target="_blank" rel="noopener">Maybank dips 4%, banking stocks retreat as investors digest soft quarter</a>
         </div>
-        <div class="article-source">NST Online</div>
-        <div class="article-summary">For the third consecutive session, Bursa Malaysia closed lower as escalating geopolitical tensions in the Middle East continued to rattle investor confidence. The prolonged decline has erased significant gains from earlier in the year, with plantation, energy, and financial stocks bearing the brunt of selling pressure amid fears of sustained instability in global oil markets.</div>
+        <div class="article-source">The Edge Malaysia</div>
+        <div class="article-summary">Malayan Banking (Maybank), Malaysia's largest lender by assets, saw its share price drop 4% as investors reacted negatively to softer quarterly earnings results. The decline triggered a broader pullback across the banking sector, with other financial stocks also coming under pressure as market participants reassess earnings outlooks amid a challenging interest rate environment. The sell-off reflects growing caution about the near-term profitability trajectory of Malaysian banks.</div>
       </div>
 
-      <div class="article-card">
+      <div class="article">
         <div class="article-title">
           <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE5RdTMxdnVidGNuc2V1RTFkNWNXSGcwSXhLM0RVRUE4YTZXUFZDWjVLbGVUUDVpdzhUU2UzMTV6eEJzcWNtVERlVmpkVVgtNGZ3bEE?oc=5" target="_blank" rel="noopener">DAP Youth: Dissolve Parliament immediately if Johor BN goes solo in state polls</a>
         </div>
         <div class="article-source">Malaysiakini</div>
-        <div class="article-summary">DAP Youth has called for an immediate dissolution of Parliament should Johor Barisan Nasional decide to contest the upcoming state elections independently, warning that such a move would fracture the federal unity government. The demand underscores growing tensions within the ruling coalition as parties jockey for position ahead of state-level polls, potentially triggering a broader political crisis in Malaysia.</div>
+        <div class="article-summary">DAP Youth has issued a strongly worded demand calling for Parliament to be dissolved immediately if Barisan Nasional's Johor chapter proceeds with contesting state elections independently. The statement signals growing friction within the ruling coalition, with DAP raising concerns about BN breaking away from agreed electoral pacts. This development could have significant implications for the stability of the federal government and the upcoming state election landscape.</div>
       </div>
     </div>
 
-    <!-- 🌍 GLOBAL -->
+    <!-- ====== Global ====== -->
     <div class="category">
       <div class="cat-header">
-        <span class="cat-icon">&#x1F30D;</span>
-        <span class="cat-title">Global</span>
+        <span class="cat-emoji">🌍</span>
+        <span class="cat-title">Global News</span>
+        <span class="cat-count">5 articles</span>
       </div>
 
-      <div class="article-card accent-amber">
+      <div class="article accent-amber">
         <div class="article-title">
-          <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFA4NjZQcHJQaDBaRTlzNEZ5dDJTR1UyWUJibWxBWFhFUjdfd1NFdzZpeGF3YUpObHc2OU5sZjNwa2o5dHZXVEViUV9sUTNzR1JCYzI3VWZqUGxaMGxFUDN3VVpVWjdCWjBCV2hzSXI5SzFGVU0?oc=5" target="_blank" rel="noopener">U.S., Iran and Israel Agree to Cease-Fire</a>
+          <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxQcEJ1UzBmQkZUOUY2Z0t6OV9YRTJrTFpxX2o0RDV3Zm9qUjZDQzRDdDdSUXM5bndkYksxSTNtMXhETG1lSG9vaUVBMm9jdVZYX2p0OTNQUDN4d0N1VFlHOXRtLUZRY1Zjc0hUeEhEZFNfZFcwWG16cjNMSjVPdlVDZg?oc=5" target="_blank" rel="noopener">Trump plan could halt all international flights at SEA Airport just before World Cup</a>
         </div>
-        <div class="article-source">The New York Times</div>
-        <div class="article-summary">The United States, Iran, and Israel have reportedly reached a cease-fire agreement, marking a potentially major de-escalation in the conflict that has roiled the Middle East and global markets for weeks. The deal, which still requires formal sign-off from President Trump, is expected to include provisions for reopening the Strait of Hormuz and establishing a monitoring mechanism to prevent further violations.</div>
+        <div class="article-source">MyNorthwest.com</div>
+        <div class="article-summary">A proposed Trump administration policy threatens to halt all international flight operations at Seattle-Tacoma International Airport (SEA) just ahead of the 2026 FIFA World Cup, which is set to draw massive crowds to the region. The plan, which involves potential CBP staffing cuts or policy changes, could create significant logistical chaos for one of the major US gateway airports hosting World Cup matches. Local officials and travel industry stakeholders are raising alarms about the economic and reputational damage such a shutdown would cause during the globally televised event.</div>
       </div>
 
-      <div class="article-card accent-amber">
+      <div class="article accent-amber">
         <div class="article-title">
-          <a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxPUXlJR3NlWHFGZm9KZDZoZnFUMWpoWGpsU3ZnTWpuRnBOZjV3VkJSRGh2RW9zc2hoaVBzcjRjSks1WEVvaE5ubUU4aVR2Yk03U3AzdndDaWlwUWFVOEFGUF9WVHZsajBnckZDUl9YRzAtQlpkTWhZelJRTnV0UTNtUWJqUWtBUmZvd3FZN2tJZkZSRy1rNmFpOEgzSEdyQXA5OFVZTFotald6X0s4?oc=5" target="_blank" rel="noopener">World hurries to respond to rapidly changing war around Iran</a>
+          <a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxQeDhlZU5zS0p2RFNYVUhHdU8wRURpTlRFU3lPQlJXS1JuLWZtRFVIdnpBT3FvZFhrcXdLVlAya3JIbFhnZkdzb05MQkIyME5oYVMtWEc2Mlg4Yk1PVnBqN1VER091RHVrT01xQTF6TlRPZXRNUGNiTWNvSGl0d3U0bVI4OU85b0tYU2tGV2pqLThHT0s3UmdKeVhXVExGb29mTWRnSVgwWVNEcmRrZVJLc2Myaw?oc=5" target="_blank" rel="noopener">Plans for the Gaza International Stabilization Force are in question as troop pledges stall</a>
         </div>
         <div class="article-source">AP News</div>
-        <div class="article-summary">Governments across the globe are scrambling to adjust their diplomatic and economic strategies as the Iran-US conflict shifts rapidly between escalation and potential truce. European allies, Gulf states, and Asian powers are all recalibrating their positions, with oil-dependent economies particularly anxious about supply disruptions from the Strait of Hormuz and the broader regional instability affecting global energy markets.</div>
+        <div class="article-summary">International plans to deploy a Gaza International Stabilization Force are facing uncertainty as key nations have failed to pledge the necessary troops to make the mission viable. The force was envisioned as a neutral peacekeeping contingent to secure the post-conflict environment in Gaza, but diplomatic efforts have hit a wall. The stalled commitments raise fresh doubts about the international community's ability to maintain stability in the region amid ongoing tensions between Israel and Hamas.</div>
       </div>
 
-      <div class="article-card accent-amber">
+      <div class="article accent-amber">
         <div class="article-title">
-          <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE0zU0NKYTVwWHFFNWotdUFwN3lsUWR2N2JZM0ZHek5pQXYzSGlRbnBjRjRjRUlCR2w0MUxPb3hLYTh5MWZ2VWM1U0p0OTQwWmtHcWVkWTBaZ0lmZw?oc=5" target="_blank" rel="noopener">Trump withdraws US from key climate treaty and dozens of other groups</a>
+          <a href="https://news.google.com/rss/articles/CBMi7AFBVV95cUxQc043ODRqQmJCV2VtbmVuXzJGUDNDblBIelRuVVd2a040eGpLd092a3hWdnptRVI5UTRTTnhLUm9ZeUlQbVVWT3BVRFJfdEpJNURCNm0wQW5TR1FsNUpZdFp3Y2RNdHI3ZE1EMndmZHFLTjRodXNGYmxSby1XQkRIdTRoMUlaWmQ4bnhNbjNZZTlsY2VRQjQ0MGZBX3JTekpybjV5TjRlM0hreWZxRGFPQzdoaW5VaFE1SVpoTWhlTDdFYl9oR202OUQ3OVlmZ1NiSjZZYW1zS1RYbS1DY25PY0VOYlBUWUY2QjdOZQ?oc=5" target="_blank" rel="noopener">State of California attracts global investment through coordinated international engagement at the 2026 SelectUSA Investment Summit</a>
         </div>
-        <div class="article-source">BBC</div>
-        <div class="article-summary">President Trump has followed through on his promise to withdraw the United States from a major international climate treaty along with dozens of other multilateral organizations, dramatically reshaping America's role in global governance. The sweeping withdrawals have drawn sharp criticism from world leaders and environmental groups, who warn that the move will severely hamper international efforts to combat climate change and address transnational challenges.</div>
+        <div class="article-source">California Governor's Office of Business and Economic Development (.gov)</div>
+        <div class="article-summary">California's state government reported strong success in attracting foreign direct investment at the 2026 SelectUSA Investment Summit, leveraging coordinated international engagement strategies to court global capital. The summit serves as a platform for US states to pitch investment opportunities to international businesses, with California highlighting its leadership in technology, clean energy, and entertainment sectors. The positive outcome underscores California's continued appeal as a top destination for global investment despite broader economic headwinds.</div>
       </div>
 
-      <div class="article-card accent-amber">
+      <div class="article accent-amber">
         <div class="article-title">
-          <a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxPTHV6UVZNQjA3RFY1YzFGYnByVWN2cWtpV3ZJSkpHTmJoSWpCUi1CUzBaLVZfcjJNNlI2LWlqU1BoUDRJb2ZjWkY2RzVwdUVwWFJfc0d6MmlubEJfdGprWHpIR2k2WG5aLXlwa1ZzY01oRGN3T3Q1djJEcHJDZGpjeU1WZktiak9haTU5NFpKbHl1OTM0X2k4RmtKNVZXaW9nWlVCcGpUdTBxWkMtT3dES0dodw?oc=5" target="_blank" rel="noopener">Global outcry after US launches strikes on Venezuela and captures president</a>
+          <a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxQVDMteU82ZGRuWG15dWZGTFMzZFUtSmlRV0Z4bHA4OWtUVTFRMW1TR2RkcENNRnBCZUd0NFRBamJySndubXZyWlZPZDBtUkxIRnd1VkFNSEFsUWZRT21IdXIydm1QRk4xZGM5OTA4blpGZFYxMEt0QmFVQTVkMkJUYzk1VmV5Wl9HTkxnYVV2NjBwS2pHZlJVMUNkel8tTjhJWVBVWjg2LTJJakl6enVoRDhxLU9kOUNHeFc4SjFjbGs0QQ?oc=5" target="_blank" rel="noopener">US agency could soon stop processing international flights at Newark, DHS secretary says</a>
         </div>
-        <div class="article-source">The Guardian</div>
-        <div class="article-summary">International condemnation has poured in following U.S. military strikes on Venezuela that resulted in the capture of President Nicolás Maduro, an unprecedented escalation in Washington's policy toward Latin America. The operation has been denounced by a broad coalition of nations including China, Russia, and several Latin American governments, who accuse the Trump administration of violating international law and sovereign integrity.</div>
+        <div class="article-source">Reuters</div>
+        <div class="article-summary">The US Department of Homeland Security signaled that a federal agency could soon suspend international flight processing at Newark Liberty International Airport, one of the busiest travel hubs in the New York metropolitan area. The DHS secretary's warning points to potential staffing shortages or policy disputes affecting CBP operations at the airport. Such a move would disrupt travel for thousands of international passengers and could have cascading effects on airline schedules and the broader US travel industry.</div>
       </div>
 
-      <div class="article-card accent-amber">
-        <div class="article-title">
-          <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE9hcl93WjlDWjlIQXoyV0R1ZWhFYWlpeEkzWVRrWG5PSVhxd0VDd1FpbHFfdHhJRHpNVTJxYjJ5UHU3ZzhJODJUa09IWWYzTFpWbjlwOXdTWU5qWjNR?oc=5" target="_blank" rel="noopener">UK faces biggest hit to growth from Iran war of major economies, IMF says</a>
-        </div>
-        <div class="article-source">BBC</div>
-        <div class="article-summary">The International Monetary Fund has warned that the United Kingdom will suffer the most severe economic growth impact from the Iran-US conflict among major advanced economies, citing the UK's exposure to oil price volatility and trade disruption through the Strait of Hormuz. The IMF assessment adds pressure on the British government as it navigates the dual challenges of managing inflation and maintaining fiscal stability amid the ongoing geopolitical crisis.</div>
-      </div>
-    </div>
-
-    <!-- 🇮🇷🇺🇸 IRAN-US -->
-    <div class="category">
-      <div class="cat-header">
-        <span class="cat-icon">&#x1F1EE;&#x1F1F7;&#x1F1FA;&#x1F1F8;</span>
-        <span class="cat-title">Iran-US Conflict</span>
-      </div>
-
-      <div class="article-card accent-red">
-        <div class="article-title">
-          <a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxPMjBheDJiTHNmOFdRbzJvVlBiZFYtNk9iOGl5UUxCVFMzQ2REMV9HNFZvOU1XcWVLSzUxNjdXdE5ZR3FoZWd2VkFnQzRxZ2hYanpqdkEwTmNIZVFVaklBdnV6d0dmR0hSNnlQbFY2b0FiTG96MUJwY2otYzJMcUItb1RCUUF3bXRldk91TkJkUk5BWnQxbXBzZ3BjQTllandyLXVwaDA3ck9pT1VzUW1hRzZiaFZfQ0hnN3RpMTJJVERKQdIBxwFBVV95cUxPQzBmc1RFR0xDQXFYVmw5RTVGTVBZakRhUGJ4S1lKTDVNOURsWmNSS0hMMVRmeG9OT0Y3TzF3TndBYnRtTGNYZVVOaVdEUExqOGJBdUVEem1uT3ZFYW12dWhqbmxVVFlSc3NIU0UzSE0tTjEtWGl2RHVneUtHb0hMTENadFY0SWdNWUZkdTc4NExhQW5CMV9hNkNuQlpBV21mTHQ1WWhQaDdaa3JmZERxS01BLWpNSmYwdU5kMExsTXR2c2dQT0pJ?oc=5" target="_blank" rel="noopener">Iran war live: US, Iran reach MoU on 60-day truce, Trump&#8217;s approval pending</a>
-        </div>
-        <div class="article-source">Al Jazeera</div>
-        <div class="article-summary">Iran and the United States have signed a Memorandum of Understanding outlining a 60-day truce, but the agreement remains contingent on President Trump's formal approval. The truce would provide a temporary halt to hostilities that have escalated dramatically in recent weeks, including missile strikes, naval confrontations in the Strait of Hormuz, and cyberattacks targeting critical infrastructure on both sides.</div>
-      </div>
-
-      <div class="article-card accent-red">
-        <div class="article-title">
-          <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFBjcEY0Nm5uRVdfRG9zN0dELU5iQTBTVUJYLTA2QlowVFRWZkZpcmRsSDhCdmRyMVVRN0piU1IyZWNLM1hWdDBGNUpRVFVpUE9hVzV1TGZOWDFYQQ?oc=5" target="_blank" rel="noopener">Are US and Iran close to peace or sliding back to war?</a>
-        </div>
-        <div class="article-source">BBC</div>
-        <div class="article-summary">Analysts are divided on whether the tentative truce between Washington and Tehran represents a genuine path to de-escalation or merely a tactical pause before renewed conflict. The BBC examines the key sticking points — including Iran's nuclear ambitions, the future of sanctions, and the role of regional proxies — that could determine whether the current diplomatic momentum leads to lasting peace or collapses into another devastating round of hostilities.</div>
-      </div>
-
-      <div class="article-card accent-red">
-        <div class="article-title">
-          <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9nU2JJbWg5ZjRFYUNaaVV2b19hT25aeWtFZER1Tkhyby1yNU16d3FwNVVZblBBemQ4eTVwMWNTYVY1NzNIRnpzU193WFdjUzhYakhsNmxSTkpkbnJCSGsxcU9YeENCQ1RWR2kwdFl0bGc?oc=5" target="_blank" rel="noopener">Live updates: US and Iran reach tentative agreement, but deal still needs Trump&#8217;s sign-off</a>
-        </div>
-        <div class="article-source">CNN</div>
-        <div class="article-summary">CNN's live coverage details the fast-moving diplomatic developments as U.S. and Iranian negotiators finalize a tentative framework for de-escalation, though the agreement's fate ultimately rests with President Trump. The proposed deal reportedly includes confidence-building measures such as prisoner exchanges, a partial lifting of sanctions on Iranian oil exports, and the establishment of a neutral monitoring mission in the Persian Gulf.</div>
-      </div>
-
-      <div class="article-card accent-red">
-        <div class="article-title">
-          <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE1fcnhwNnhKV0lpWUV1WGdIUkltT1RpQXBKTnk5T05IRmpBcXZoc1dxcjkxVWNmWnVHVGk2LWlVYWMzTmRUS0tydERZRlRtdjFWbGJTa1ktMXcwRTU1MDdRMXFDVzAzb0VHLVhfMXd4STVvRDMyeGRR?oc=5" target="_blank" rel="noopener">Iran War Live Updates: U.S. Officials Say They Are Closing In on Arrangement to Reopen Strait of Hormuz</a>
-        </div>
-        <div class="article-source">The New York Times</div>
-        <div class="article-summary">U.S. officials have signaled progress in negotiations to reopen the Strait of Hormuz, a critical chokepoint through which approximately 20% of the world's oil passes, as part of a broader de-escalation arrangement with Iran. The reopening would provide immediate relief to global energy markets that have been destabilized by the conflict, with oil prices having surged dramatically since the strait was effectively closed by Iranian naval operations.</div>
-      </div>
-
-      <div class="article-card accent-red">
-        <div class="article-title">
-          <a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxQOThzeThOUGptUjAyVnJwa2tQbEwwdUJ3LXEtdmxSUWhVcndqejRfWVUtb1ZadHBmaUZackdETGF5a3Q4ejNRRnNSakpLT3dpRkRkMFVfZlpzSG1xTndrUlBzYUZmZDVYQjJIdzR5MkFTUG5LQk5EbkxlakZZdk5GTlZ0N3l0UHowakZUSV9YN2wtOXVfNEVEVHJLdktMaUhYcmgyU2VYMlp0MDg?oc=5" target="_blank" rel="noopener">Live updates: Iran and U.S. trade strikes, accuse each other of violating truce</a>
-        </div>
-        <div class="article-source">NBC News</div>
-        <div class="article-summary">Despite the reported MoU, both Iran and the U.S. have continued to trade accusations of ceasefire violations, with each side reporting fresh strikes against military positions. The fragile nature of the truce highlights the deep mistrust between the two nations after months of direct confrontation, and raises questions about whether any agreement can hold without robust third-party verification mechanisms on the ground.</div>
-      </div>
-    </div>
-
-    <!-- 💻 TECH/AI -->
-    <div class="category">
-      <div class="cat-header">
-        <span class="cat-icon">&#x1F4BB;</span>
-        <span class="cat-title">Technology &amp; AI</span>
-      </div>
-
-      <div class="article-card accent-purple">
-        <div class="article-title">
-          <a href="https://news.google.com/rss/articles/CBMie0FVX3lxTFBDS1JjbHlsWlQ0YWJDVGx5blJYWllYQk94U2loQkxVbS1jX0hRU1ZoOUxfdmVkNjZFeGk2RHNSSmdxVmtXdVJCVHRPYjJQeE5aZE1DeFpBYWVBcGZ5RkxlMWVsTl84RVBHRXRZbjRIRDY0T0kwTDhFMmpmTQ?oc=5" target="_blank" rel="noopener">At the Epicenter of A.I., Pope Leo&#8217;s Warnings Are Dismissed</a>
-        </div>
-        <div class="article-source">The New York Times</div>
-        <div class="article-summary">Pope Leo's repeated warnings about the ethical implications of unchecked artificial intelligence development are being largely ignored by the tech industry, even as AI capabilities accelerate at the very companies geographically closest to the Vatican. The pontiff has urged global leaders to establish binding regulations on AI development, particularly concerning autonomous weapons, surveillance systems, and the displacement of human labor, but Silicon Valley continues to prioritize rapid deployment over ethical guardrails.</div>
-      </div>
-
-      <div class="article-card accent-purple">
-        <div class="article-title">
-          <a href="https://news.google.com/rss/articles/CBMi5gFBVV95cUxPc09ZWEhvR1F6YjRqblB1Q25iWXhENWo1UXZzOXpvYlBHcDFnZmxWYVZWM2pQQ3NYZndZYkh6THF1a2J3Tk5oS3F1eTl6d3l6YVdsaXR6Q3lVYnZlZlJaSkVYaEFCQk9aZlBoOHlQdk5fU1NJSjhVY3lzbWoxaUVaV0pqaFZER1pVWnEtOHE4ZUJWZmY5QmlRQWRRTFVJN3V1NU14bzJycnQySVBSRzhNcUsxbEI1blRHLS1Nb1pTR29Rc3hESzRZalpyOUpKaDA5VnoxeFdCYW5lcGtMUTBrRURGbmF6QQ?oc=5" target="_blank" rel="noopener">Airbus partners with Mistral AI to strengthen the use of artificial intelligence in sovereign aerospace applications</a>
-        </div>
-        <div class="article-source">Airbus</div>
-        <div class="article-summary">Airbus has announced a strategic partnership with French AI startup Mistral AI to jointly develop sovereign AI capabilities for aerospace and defense applications, marking a significant push by European industry to reduce reliance on American AI providers. The collaboration will focus on deploying large language models for aircraft design optimization, autonomous flight systems, and defense intelligence analysis, with a strong emphasis on data sovereignty and European regulatory compliance.</div>
-      </div>
-
-      <div class="article-card accent-purple">
-        <div class="article-title">
-          <a href="https://news.google.com/rss/articles/CBMi1wJBVV95cUxQZTlVcG9UOExKTDU1VzRmUHVNTGs5dDdSejQyQVNrekZkWW9wc1dFUVRhak1fRUptM0FSVU9PNlJJVVB1eFU3Q0MyWUpONy02ZUVRZmtiYmVQUWI1eHZTOGxmY25XMmJxVG1FdGIxOXppZldLeG9MV1p6eXk3N0RLSGRZOW00UmVxVktRWTdSY2ZobTNkMVA0TWhHRGd0TGN1SGhwamJxOEZKdTVaZTAtd1ZSc0t4M1hKaE45Q0RjN0ZWRnFHa2xWU2htS0JnYVpyMFpVMFB6T05xcWVwWE1BQzVrdzFiR0V4U0VhMHo0MlJjVmVxR1JnQUZpbjhLSzBFdk1zdHVNZm9MdkktNlhzSWItc2ZFRVVfOGNlaklUY3dadFFONXl0amtHOER6dVFXTWRWdmlWdWZzRUZtcXhZeE9NdEpSN1RicUs1X3FOTXBOUVpvREc4?oc=5" target="_blank" rel="noopener">AI costs begin to bite as agents may increase token demand by 24 times, says Goldman Sachs report</a>
-        </div>
-        <div class="article-source">Tom's Hardware</div>
-        <div class="article-summary">A new Goldman Sachs report warns that the operational costs of AI agents could drive token demand up by 24 times current levels, posing a significant financial challenge for companies like Uber and Microsoft that are heavily investing in autonomous AI systems. The analysis highlights the hidden infrastructure costs of the AI boom, with tokenized billing models straining corporate budgets and raising questions about the long-term profitability of deploying AI agents at scale across enterprise operations.</div>
-      </div>
-
-      <div class="article-card accent-purple">
-        <div class="article-title">
-          <a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxNUzdwaWNfMEk0dkt5alVLNmRPRlVqbExNcWhHOVNGMnB0Sy1uLXZUZno0VC1WZU5OUmh3SFVSb3NTbmdvdU1NMXR1Q1FtRGY3dC1sTEZHZnNqamFscHVQN2JxU0djUDN3V3dFUXZEME5NNVhydDd4bm1DMjRNUElCTU1ibHgtZDM4QlVNdU9EU3ZKeF9UemJKekROR3dFSHhrYUhjUGRrZ2V3WGlwc0VCUmJHaHFRU2tpRWc?oc=5" target="_blank" rel="noopener">An African perspective on AI</a>
-        </div>
-        <div class="article-source">Vatican News</div>
-        <div class="article-summary">The Vatican has spotlighted an African perspective on artificial intelligence, emphasizing the need for inclusive AI governance that addresses the digital divide and ensures that developing nations are not left behind in the technological revolution. The piece explores how African nations are uniquely positioned to shape ethical AI frameworks, leveraging the continent's experience with mobile-first technology adoption and community-based innovation models to influence global AI policy discussions.</div>
-      </div>
-
-      <div class="article-card accent-purple">
+      <div class="article accent-amber">
         <div class="article-title">
           <a href="https://news.google.com/rss/articles/CBMi-AFBVV95cUxPYTZXMTNsTy1rZWdCQWlWNmpQRzJ3TlpzS3VzSnFUYU5YaDJySkFCNzNQSVZhNGFWNWM4bi1xZVZSWGtpUDQzS3R4SUhSWHdmdjI1bXdrUE9JSTJsYkUzNHFOT2hoNDlqeXlHeWhpYkhrTGpCaG5yNW9LQUw3Q0FRLUZCRENaY0NGeUxIVFZ1YmNNWkNGUGgza1ZzaUJCbVllbkt2Z1hJdy01RVJmZl9mQW4ySVdxUmRFVXlFcDRpT0RxNWd2ZmNDWEViMVlJNkZnQmpoTG02aGg1U0dxUDQ4eU1qZnlzbjhTUTktYXdtUUlneUo5bjFsdQ?oc=5" target="_blank" rel="noopener">Global: Enormous data pipelines powering major generative AI systems are rooted in mass invasions of privacy by design</a>
         </div>
         <div class="article-source">Amnesty International</div>
-        <div class="article-summary">Amnesty International has released a scathing report accusing major AI companies of building their generative AI systems on foundations of mass privacy violations, arguing that the enormous data pipelines fueling large language models are inherently designed to scrape personal information without meaningful consent. The human rights organization calls for urgent regulatory intervention to establish boundaries on data collection practices, warning that the current trajectory of AI development represents a systemic threat to privacy rights globally.</div>
+        <div class="article-summary">Amnesty International has released a scathing report alleging that the massive data pipelines fueling the world's leading generative AI systems are fundamentally built on widespread privacy violations that are structural and intentional. The human rights organization argues that the data collection practices used by major AI developers constitute systematic invasions of privacy, affecting billions of internet users without meaningful consent. The report calls for urgent regulatory intervention to curb what it describes as "surveillance-driven AI development."</div>
+      </div>
+    </div>
+
+    <!-- ====== Iran-US ====== -->
+    <div class="category">
+      <div class="cat-header">
+        <span class="cat-emoji">🇮🇷🇺🇸</span>
+        <span class="cat-title">Iran-US Conflict</span>
+        <span class="cat-count">5 articles</span>
+      </div>
+
+      <div class="article accent-red">
+        <div class="article-title">
+          <a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxPMjBheDJiTHNmOFdRbzJvVlBiZFYtNk9iOGl5UUxCVFMzQ2REMV9HNFZvOU1XcWVLSzUxNjdXdE5ZR3FoZWd2VkFnQzRxZ2hYanpqdkEwTmNIZVFVaklBdnV6d0dmR0hSNnlQbFY2b0FiTG96MUJwY2otYzJMcUItb1RCUUF3bXRldk91TkJkUk5BWnQxbXBzZ3BjQTllandyLXVwaDA3ck9pT1VzUW1hRzZiaFZfQ0hnN3RpMTJJVERKQdIBxwFBVV95cUxPQzBmc1RFR0xDQXFYVmw5RTVGTVBZakRhUGJ4S1lKTDVNOURsWmNSS0hMMVRmeG9OT0Y3TzF3TndBYnRtTGNYZVVOaVdEUExqOGJBdUVEem1uT3ZFYW12dWhqbmxVVFlSc3NIU0UzSE0tTjEtWGl2RHVneUtHb0hMTENadFY0SWdNWUZkdTc4NExhQW5CMV9hNkNuQlpBV21mTHQ1WWhQaDdaa3JmZERxS01BLWpNSmYwdU5kMExsTXR2c2dQT0pJ?oc=5" target="_blank" rel="noopener">Iran war live: US, Iran reach MoU on 60-day truce, Trump's approval pending</a>
+        </div>
+        <div class="article-source">Al Jazeera</div>
+        <div class="article-summary">The United States and Iran have reportedly reached a Memorandum of Understanding on a 60-day truce, marking a potential de-escalation in the ongoing conflict. However, the deal remains contingent on formal approval from former President Donald Trump, whose sign-off is required before the ceasefire can take effect. The development represents the most significant diplomatic breakthrough in weeks, though the conditional nature leaves the situation fragile.</div>
+      </div>
+
+      <div class="article accent-red">
+        <div class="article-title">
+          <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFBjcEY0Nm5uRVdfRG9zN0dELU5iQTBTVUJYLTA2QlowVFRWZkZpcmRsSDhCdmRyMVVRN0piU1IyZWNLM1hWdDBGNUpRVFVpUE9hVzV1TGZOWDFYQQ?oc=5" target="_blank" rel="noopener">Are US and Iran close to peace or sliding back to war?</a>
+        </div>
+        <div class="article-source">BBC</div>
+        <div class="article-summary">The BBC examines the precarious state of US-Iran relations, analyzing whether the two nations are genuinely approaching a durable peace agreement or merely pausing before a renewed escalation of hostilities. The piece weighs the tentative diplomatic signals against the continued military posturing on both sides, including ongoing accusations of truce violations. With a potential 60-day ceasefire framework emerging, the outcome hinges on political will in both Washington and Tehran.</div>
+      </div>
+
+      <div class="article accent-red">
+        <div class="article-title">
+          <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9nU2JJbWg5ZjRFYUNaaVV2b19hT25aeWtFZER1Tkhyby1yNU16d3FwNVVZblBBemQ4eTVwMWNTYVY1NzNIRnpzU193WFdjUzhYakhsNmxSTkpkbnJCSGsxcU9YeENCQ1RWR2kwdFl0bGc?oc=5" target="_blank" rel="noopener">Live updates: US and Iran reach tentative agreement, but deal still needs Trump's sign-off</a>
+        </div>
+        <div class="article-source">CNN</div>
+        <div class="article-summary">CNN reports that American and Iranian negotiators have reached a tentative agreement framework, though the deal is not yet finalized as it awaits formal approval from Donald Trump. The proposed terms reportedly include a temporary cessation of hostilities and confidence-building measures. The development follows intense back-channel diplomacy and represents the most concrete progress toward de-escalation since the conflict escalated.</div>
+      </div>
+
+      <div class="article accent-red">
+        <div class="article-title">
+          <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE1fcnhwNnhKV0lpWUV1WGdIUkltT1RpQXBKTnk5T05IRmpBcXZoc1dxcjkxVWNmWnVHVGk2LWlVYWMzTmRUS0tydERZRlRtdjFWbGJTa1ktMXcwRTU1MDdRMXFDVzAzb0VHLVhfMXd4STVvRDMyeGRR?oc=5" target="_blank" rel="noopener">Iran War Live Updates: U.S. Officials Say They Are Closing In on Arrangement to Reopen Strait of Hormuz</a>
+        </div>
+        <div class="article-source">The New York Times</div>
+        <div class="article-summary">US officials have signaled that negotiations are progressing toward an arrangement to reopen the Strait of Hormuz, a critical chokepoint for global oil shipments that has been affected by the Iran-US conflict. The potential reopening would alleviate significant pressure on global energy markets and stabilize oil prices that have been volatile due to supply disruption fears. The NYT reports that the deal is part of broader discussions on de-escalation and maritime security guarantees.</div>
+      </div>
+
+      <div class="article accent-red">
+        <div class="article-title">
+          <a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxQOThzeThOUGptUjAyVnJwa2tQbEwwdUJ3LXEtdmxSUWhVcndqejRfWVUtb1ZadHBmaUZackdETGF5a3Q4ejNRRnNSakpLT3dpRkRkMFVfZlpzSG1xTndrUlBzYUZmZDVYQjJIdzR5MkFTUG5LQk5EbkxlakZZdk5GTlZ0N3l0UHowakZUSV9YN2wtOXVfNEVEVHJLdktMaUhYcmgyU2VYMlp0MDg?oc=5" target="_blank" rel="noopener">Live updates: Iran and U.S. trade strikes, accuse each other of violating truce</a>
+        </div>
+        <div class="article-source">NBC News</div>
+        <div class="article-summary">Despite reports of a potential truce agreement, NBC News reports that Iran and the US have engaged in fresh exchanges of strikes while simultaneously accusing each other of violating ceasefire terms. The contradictory situation — diplomatic progress alongside continued military action — underscores the volatility and lack of trust between the two sides. The tit-for-tat strikes risk unraveling the tentative negotiations before a formal ceasefire can be finalized.</div>
+      </div>
+    </div>
+
+    <!-- ====== Tech & AI ====== -->
+    <div class="category">
+      <div class="cat-header">
+        <span class="cat-emoji">💻</span>
+        <span class="cat-title">Technology &amp; AI</span>
+        <span class="cat-count">5 articles</span>
+      </div>
+
+      <div class="article accent-purple">
+        <div class="article-title">
+          <a href="https://news.google.com/rss/articles/CBMie0FVX3lxTFBDS1JjbHlsWlQ0YWJDVGx5blJYWllYQk94U2loQkxVbS1jX0hRU1ZoOUxfdmVkNjZFeGk2RHNSSmdxVmtXdVJCVHRPYjJQeE5aZE1DeFpBYWVBcGZ5RkxlMWVsTl84RVBHRXRZbjRIRDY0T0kwTDhFMmpmTQ?oc=5" target="_blank" rel="noopener">At the Epicenter of A.I., Pope Leo's Warnings Are Dismissed</a>
+        </div>
+        <div class="article-source">The New York Times</div>
+        <div class="article-summary">The New York Times reports that within the AI industry's leading hubs — Silicon Valley and global tech centers — Pope Leo's ethical warnings about the unbridled development of artificial intelligence are being largely ignored or dismissed by technologists and executives. The Pontiff has been increasingly vocal about the moral dimensions of AI, including concerns about human dignity, labor displacement, and autonomous weapons, but his calls for ethical guardrails face resistance from a profit-driven industry. The piece highlights the growing disconnect between religious and secular perspectives on AI governance.</div>
+      </div>
+
+      <div class="article accent-purple">
+        <div class="article-title">
+          <a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxNSnJoLWVZd0NQUGdWMWtyNXd3RHlHVFlaZHNDdDh6bWhwSUYwUXEtM0VOZmxBcmVGbWFjWmlzZFRlSTJMcV9QcmFuU2dRY1VKemJ2eWt6ckVzRTdjQXVOX09XaEphYkFJYlNERG9uUXVyTmllcmx3dVQtbk1GaUp5d0VtNHdNS2xOdzNkTFhLcU5WdUhqeVFZ?oc=5" target="_blank" rel="noopener">This 1 Top Tech Stock Offers Investors 3 Big Ways to Win With Artificial Intelligence (AI)</a>
+        </div>
+        <div class="article-source">Yahoo Finance</div>
+        <div class="article-summary">Yahoo Finance highlights a leading technology stock that offers investors three distinct pathways to capitalize on the artificial intelligence boom, including hardware infrastructure exposure, software/platform plays, and vertical AI application integration. The analysis suggests this single stock provides diversified AI investment exposure without requiring investors to pick individual winners in a crowded and volatile sector. The piece reflects the broader market trend of investors seeking concentrated AI plays with multiple growth vectors.</div>
+      </div>
+
+      <div class="article accent-purple">
+        <div class="article-title">
+          <a href="https://news.google.com/rss/articles/CBMi5gFBVV95cUxPc09ZWEhvR1F6YjRqblB1Q25iWXhENWo1UXZzOXpvYlBHcDFnZmxWYVZWM2pQQ3NYZndZYkh6THF1a2J3Tk5oS3F1eTl6d3l6YVdsaXR6Q3lVYnZlZlJaSkVYaEFCQk9aZlBoOHlQdk5fU1NJSjhVY3lzbWoxaUVaV0pqaFZER1pVWnEtOHE4ZUJWZmY5QmlRQWRRTFVJN3V1NU14bzJycnQySVBSRzhNcUsxbEI1blRHLS1Nb1pTR29Rc3hESzRZalpyOUpKaDA5VnoxeFdCYW5lcGtMUTBrRURGbmF6QQ?oc=5" target="_blank" rel="noopener">Airbus partners with Mistral AI to strengthen the use of artificial intelligence in sovereign aerospace applications</a>
+        </div>
+        <div class="article-source">Airbus</div>
+        <div class="article-summary">European aerospace giant Airbus has announced a strategic partnership with French AI startup Mistral AI to integrate advanced artificial intelligence capabilities into sovereign aerospace applications, emphasizing European technological independence. The collaboration will focus on deploying Mistral's large language models and AI systems across Airbus's aerospace and defense operations, reducing reliance on non-European AI providers. The deal reflects the growing trend of European industrial champions building AI partnerships with home-grown startups to maintain strategic autonomy.</div>
+      </div>
+
+      <div class="article accent-purple">
+        <div class="article-title">
+          <a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxNUzdwaWNfMEk0dkt5alVLNmRPRlVqbExNcWhHOVNGMnB0Sy1uLXZUZno0VC1WZU5OUmh3SFVSb3NTbmdvdU1NMXR1Q1FtRGY3dC1sTEZHZnNqamFscHVQN2JxU0djUDN3V3dFUXZEME5NNVhydDd4bm1DMjRNUElCTU1ibHgtZDM4QlVNdU9EU3ZKeF9UemJKekROR3dFSHhrYUhjUGRrZ2V3WGlwc0VCUmJHaHFRU2tpRWc?oc=5" target="_blank" rel="noopener">An African perspective on AI</a>
+        </div>
+        <div class="article-source">Vatican News</div>
+        <div class="article-summary">Vatican News presents an African perspective on artificial intelligence, exploring how the continent is approaching AI development and deployment through its unique socio-economic and cultural lens. The piece examines both the opportunities — leapfrogging legacy infrastructure, improving healthcare and agriculture — and the challenges, including digital divides, data sovereignty, and colonial-era power dynamics in technology transfer. The feature contributes to the growing discourse on ensuring AI development is inclusive of Global South voices.</div>
+      </div>
+
+      <div class="article accent-purple">
+        <div class="article-title">
+          <a href="https://news.google.com/rss/articles/CBMi1wJBVV95cUxQZTlVcG9UOExKTDU1VzRmUHVNTGs5dDdSejQyQVNrekZkWW9wc1dFUVRhak1fRUptM0FSVU9PNlJJVVB1eFU3Q0MyWUpONy02ZUVRZmtiYmVQUWI1eHZTOGxmY25XMmJxVG1FdGIxOXppZldLeG9MV1p6eXk3N0RLSGRZOW00UmVxVktRWTdSY2ZobTNkMVA0TWhHRGd0TGN1SGhwamJxOEZKdTVaZTAtd1ZSc0t4M1hKaE45Q0RjN0ZWRnFHa2xWU2htS0JnYVpyMFpVMFB6T05xcWVwWE1BQzVrdzFiR0V4U0VhMHo0MlJjVmVxR1JnQUZpbjhLSzBFdk1zdHVNZm9MdkktNlhzSWItc2ZFRVVfOGNlaklUY3dadFFONXl0amtHOER6dVFXTWRWdmlWdWZzRUZtcXhZeE9NdEpSN1RicUs1X3FOTXBOUVpvREc4?oc=5" target="_blank" rel="noopener">AI costs begin to bite as agents may increase token demand by 24 times, says Goldman Sachs report — Uber and Microsoft among companies feeling the bite of tokenized billing</a>
+        </div>
+        <div class="article-source">Tom's Hardware</div>
+        <div class="article-summary">A new Goldman Sachs report warns that the financial realities of AI are beginning to set in, with AI agent systems potentially driving a 24-fold increase in token demand that could dramatically inflate cloud computing costs. Major companies including Uber and Microsoft are already feeling the impact of tokenized billing models, where every API call and AI interaction incurs incremental costs. The report raises concerns about the sustainability of current AI deployment models and suggests that enterprises may need to rethink their AI cost strategies as usage scales.</div>
       </div>
     </div>
 
   </div>
 
   <div class="footer">
-    Generated by Hermes Agent &mdash; <a href="index.html" style="color:var(--blue);">&#8592; Back to Index</a>
+    Generated by Hermes Agent &mdash; <a href="index.html">Back to Index</a>
   </div>
 
 </body>
