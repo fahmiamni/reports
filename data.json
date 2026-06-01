@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-05-31T09:00:00.000Z",
+  "lastUpdated": "2026-06-01T09:00:00.000Z",
   "period": "This Week",
   "source": "https://openrouter.ai/rankings",
   "topModels": [
-    {"rank": 1, "name": "DeepSeek V4 Flash", "author": "deepseek", "tokens": "3.31T", "growth": 3},
-    {"rank": 2, "name": "Hy3 preview", "author": "tencent", "tokens": "3.07T", "growth": 1},
-    {"rank": 3, "name": "Claude Opus 4.7", "author": "anthropic", "tokens": "2.34T", "growth": 27},
-    {"rank": 4, "name": "Claude Sonnet 4.6", "author": "anthropic", "tokens": "1.93T", "growth": 6},
-    {"rank": 5, "name": "Owl Alpha", "author": "openrouter", "tokens": "1.58T", "growth": 38}
+    {"rank": 1, "name": "DeepSeek V4 Flash", "author": "deepseek", "tokens": "3.11T", "growth": 9},
+    {"rank": 2, "name": "Hy3 preview", "author": "tencent", "tokens": "3.03T", "growth": 1},
+    {"rank": 3, "name": "Claude Opus 4.7", "author": "anthropic", "tokens": "2.32T", "growth": 20},
+    {"rank": 4, "name": "Claude Sonnet 4.6", "author": "anthropic", "tokens": "1.92T", "growth": 2},
+    {"rank": 5, "name": "Owl Alpha", "author": "openrouter", "tokens": "1.66T", "growth": 44}
   ]
 }
