@@ -1,0 +1,12 @@
+{
+  "lastUpdated": "2026-06-09T09:00:00Z",
+  "period": "This Week",
+  "source": "https://openrouter.ai/rankings",
+  "topModels": [
+    {"rank": 1, "name": "DeepSeek V4 Flash", "author": "deepseek", "tokens": "4.07T", "growth": 41},
+    {"rank": 2, "name": "Hy3 preview", "author": "tencent", "tokens": "3.3T", "growth": 12},
+    {"rank": 3, "name": "MiniMax M3", "author": "minimax", "tokens": "2.89T", "growth": 999},
+    {"rank": 4, "name": "MiMo-V2.5", "author": "xiaomi", "tokens": "2.44T", "growth": 43},
+    {"rank": 5, "name": "Owl Alpha", "author": "openrouter", "tokens": "1.98T", "growth": 13}
+  ]
+}
