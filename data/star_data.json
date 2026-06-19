@@ -28,6 +28,13 @@
       "stars": 44441,
       "forks": 7849,
       "description": "Lightweight, open-source AI agent for your tools, chats, and workflows."
+    },
+    {
+      "owner": "pewdiepie-archdaemon",
+      "repo": "odysseus",
+      "stars": 73688,
+      "forks": 9473,
+      "description": "Self-hosted AI workspace."
     }
   ]
 }
