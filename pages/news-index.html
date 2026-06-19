@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📰 News Archive — fahmiamni reports</title>
+  <style>
+    :root {
+      --dark:   #0f1b2d;
+      --blue:   #0032A0;
+      --light:  #e8edf5;
+      --mid:    #c5d0e6;
+      --green:  #1a7a4a;
+      --amber:  #d4820a;
+      --red:    #c0392b;
+      --purple: #6b21a8;
+      --text:   #1a1a2e;
+      --muted:  #5a6a7a;
+      --oc:     #ff6b35;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', 'Calibri', sans-serif;
+      background: var(--light);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    .header {
+      background: var(--dark);
+      background-image: linear-gradient(135deg, #0f1b2d 0%, #1a2f4e 100%);
+      color: #fff;
+      padding: 36px 40px 30px;
+      border-bottom: 4px solid var(--blue);
+    }
+    .header-inner { max-width: 980px; margin: 0 auto; }
+    .back-link {
+      color: var(--mid);
+      font-size: 13px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 10px;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: #fff; }
+    .header h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.3px; }
+    .header-meta { font-size: 13px; color: var(--mid); margin-top: 6px; }
+    .body {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 32px 40px 60px;
+    }
+    .link-list {
+      list-style: none;
+      background: #fff;
+      border: 1px solid var(--mid);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 5px rgba(0,0,0,.06);
+    }
+    .link-list li + li { border-top: 1px solid var(--mid); }
+    .list-link {
+      color: var(--text);
+      display: grid;
+      grid-template-columns: 8px minmax(0, 1fr) auto;
+      gap: 16px;
+      align-items: center;
+      padding: 16px 20px 15px 0;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .list-link:hover { background: #f8fafc; }
+    .list-link::before {
+      content: "";
+      align-self: stretch;
+      background: var(--blue);
+    }
+    .list-link.accent-green::before  { background: var(--green); }
+    .list-link.accent-amber::before  { background: var(--amber); }
+    .list-link.accent-red::before    { background: var(--red); }
+    .list-link.accent-purple::before { background: var(--purple); }
+    .list-link.accent-oc::before     { background: var(--oc); }
+    .link-main { min-width: 0; }
+    .link-title {
+      display: block;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+    .link-desc {
+      display: block;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+    .link-tag {
+      color: var(--blue);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .list-link.accent-green  .link-tag { color: var(--green); }
+    .list-link.accent-amber  .link-tag { color: var(--amber); }
+    .list-link.accent-red    .link-tag { color: var(--red); }
+    .list-link.accent-purple .link-tag { color: var(--purple); }
+    .list-link.accent-oc     .link-tag { color: var(--oc); }
+    .footer {
+      padding: 24px 40px;
+      border-top: 1px solid var(--mid);
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+    }
+    .footer a { color: var(--blue); }
+    @media (max-width: 700px) {
+      .header { padding: 28px 24px 22px; }
+      .header h1 { font-size: 21px; }
+      .body { padding: 24px 24px 40px; }
+      .list-link {
+        grid-template-columns: 6px minmax(0, 1fr);
+        padding-right: 16px;
+      }
+      .link-tag { grid-column: 2; margin-top: 2px; }
+      .footer { padding: 20px 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-inner">
+      <a href="../index.html" class="back-link">← Back to Index</a>
+      <h1>📰 News Archive</h1>
+      <div class="header-meta">15 reports — briefings &amp; daily summaries</div>
+    </div>
+  </div>
+  <div class="body">
+    <ul class="link-list">
+      <li>
+        <a class="list-link accent-oc" href="../news/news_briefing_2026_06_07.html">
+          <span class="link-main">
+            <span class="link-title">📰 News Briefing — 07 Jun 2026</span>
+            <span class="link-desc">Malaysia · Global · Iran-US · Tech/AI — detailed article summaries</span>
+          </span>
+          <span class="link-tag">Briefing</span>
+        </a>
+      </li>
+      <li>
+        <a class="list-link accent-oc" href="../news/news_briefing_2026_06_05.html">
+          <span class="link-main">
+            <span class="link-title">📰 News Briefing — 05 Jun 2026</span>
+            <span class="link-desc">Malaysia · Global · Iran-US · Tech/AI — detailed article summaries</span>
+          </span>
+          <span class="link-tag">Briefing</span>
+        </a>
+      </li>
+      <li>
+        <a class="list-link accent-oc" href="../news/news_briefing_2026_06_03.html">
+          <span class="link-main">
+            <span class="link-title">📰 News Briefing — 03 Jun 2026</span>
+            <span class="link-desc">Malaysia · Global · Iran-US · Tech/AI — detailed article summaries</span>
+          </span>
+          <span class="link-tag">Briefing</span>
+        </a>
+      </li>
+      <li>
+        <a class="list-link accent-oc" href="../news/news_briefing_2026_06_01.html">
+          <span class="link-main">
+            <span class="link-title">📰 News Briefing — 01 Jun 2026</span>
+            <span class="link-desc">Malaysia · Global · Iran-US · Tech/AI — detailed article summaries</span>
+          </span>
+          <span class="link-tag">Briefing</span>
+        </a>
+      </li>
+      <li>
+        <a class="list-link accent-oc" href="../news/news_briefing_2026_05_31.html">
+          <span class="link-main">
+            <span class="link-title">📰 News Briefing — 31 May 2026</span>
+            <span class="link-desc">Malaysia · Global · Iran-US · Tech/AI — detailed article summaries</span>
+          </span>
+          <span class="link-tag">Briefing</span>
+        </a>
+      </li>
+      <li>
+        <a class="list-link accent-oc" href="../news/news_briefing_2026_05_30.html">
+          <span class="link-main">
+            <span class="link-title">📰 News Briefing — 30 May 2026</span>
+            <span class="link-desc">Malaysia · Global · Iran-US · Tech/AI — detailed article summaries</span>
+          </span>
+          <span class="link-tag">Briefing</span>
+        </a>
+      </li>
+      <li>
+        <a class="list-link accent-oc" href="../news/news_briefing_2026_05_29.html">
+          <span class="link-main">
+            <span class="link-title">📰 News Briefing — 29 May 2026</span>
+            <span class="link-desc">Malaysia · Global · Iran-US · Tech/AI — detailed article summaries</span>
+          </span>
+          <span class="link-tag">Briefing</span>
+        </a>
+      </li>
+      <li>
+        <a class="list-link accent-oc" href="../news/news_briefing_2026_05_28.html">
+          <span class="link-main">
+            <span class="link-title">📰 News Briefing — 28 May 2026</span>
+            <span class="link-desc">Malaysia · Global · Iran-US · Tech/AI — detailed article summaries</span>
+          </span>
+          <span class="link-tag">Briefing</span>
+        </a>
+      </li>
+      <li>
+        <a class="list-link accent-oc" href="../news/news_briefing_2026_05_26.html">
+          <span class="link-main">
+            <span class="link-title">📰 News Briefing — 26 May 2026</span>
+            <span class="link-desc">Malaysia · Global · Iran-US · Tech/AI — detailed article summaries</span>
+          </span>
+          <span class="link-tag">Briefing</span>
+        </a>
+      </li>
+      <li>
+        <a class="list-link" href="../news/news-2026-05-22.html">
+          <span class="link-main">
+            <span class="link-title">📰 News Summary — 22 May 2026</span>
+            <span class="link-desc">Malaysia · Global · Iran-US · Tech/AI — last 24 hours</span>
+          </span>
+          <span class="link-tag">News</span>
+        </a>
+      </li>
+      <li>
+        <a class="list-link" href="../news/news-2026-05-20.html">
+          <span class="link-main">
+            <span class="link-title">📰 News Summary — 20 May 2026</span>
+            <span class="link-desc">Malaysia · Global · Iran-US · Tech/AI — last 24 hours</span>
+          </span>
+          <span class="link-tag">News</span>
+        </a>
+      </li>
+      <li>
+        <a class="list-link" href="../news/news-2026-05-19.html">
+          <span class="link-main">
+            <span class="link-title">📰 News Summary — 19 May 2026</span>
+            <span class="link-desc">Malaysia · Global · Iran-US · Tech/AI — last 24 hours</span>
+          </span>
+          <span class="link-tag">News</span>
+        </a>
+      </li>
+      <li>
+        <a class="list-link" href="../news/news-2026-05-15.html">
+          <span class="link-main">
+            <span class="link-title">📰 News Summary — 15 May 2026</span>
+            <span class="link-desc">Malaysia · Global · Iran-US · Tech/AI — last 24 hours</span>
+          </span>
+          <span class="link-tag">News</span>
+        </a>
+      </li>
+      <li>
+        <a class="list-link" href="../news/news-2026-05-17.html">
+          <span class="link-main">
+            <span class="link-title">📰 News Summary — 17 May 2026</span>
+            <span class="link-desc">Malaysia · Global · Iran-US · Tech/AI — last 24 hours</span>
+          </span>
+          <span class="link-tag">News</span>
+        </a>
+      </li>
+      <li>
+        <a class="list-link" href="../news/news-2026-05-16.html">
+          <span class="link-main">
+            <span class="link-title">📰 News Summary — 16 May 2026</span>
+            <span class="link-desc">Malaysia · Global · Iran-US · Tech/AI — last 24 hours</span>
+          </span>
+          <span class="link-tag">News</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="footer">
+    <a href="../index.html">← Back to Index</a>
+  </div>
+</body>
+</html>
