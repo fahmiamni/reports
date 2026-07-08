@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News Summary — 08 Jul 2026</title>
+  <style>
+    :root {
+      --dark: #0f1b2d; --blue: #0032A0; --light: #e8edf5;
+      --mid: #c5d0e6; --green: #1a7a4a; --amber: #d4820a;
+      --red: #c0392b; --text: #1a1a2e; --muted: #5a6a7a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Calibri, sans-serif; background: var(--light); color: var(--text); font-size: 14px; }
+
+    .header {
+      background: var(--dark);
+      background-image: linear-gradient(135deg, #0f1b2d 0%, #1a2f4e 100%);
+      color: #fff; padding: 28px 36px 24px;
+      border-bottom: 4px solid var(--blue);
+    }
+    .header-top { display: flex; align-items: center; gap: 14px; margin-bottom: 6px; }
+    .badge { background: var(--blue); color: #fff; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; }
+    .header h1 { font-size: 22px; font-weight: 700; }
+    .header-meta { font-size: 12px; color: var(--mid); margin-top: 4px; }
+
+    .body { padding: 28px 36px 48px; max-width: 1100px; }
+
+    .news-category { background: #fff; border-radius: 12px; padding: 20px 24px; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 16px; }
+    .category-title {
+      font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 14px;
+      padding: 8px 14px; border-radius: 8px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .category-title.malaysia { background: linear-gradient(135deg, #0032A0, #0050c8); }
+    .category-title.global   { background: linear-gradient(135deg, #1a7a4a, #22a86a); }
+    .category-title.iranus  { background: linear-gradient(135deg, #c0392b, #e74c3c); }
+    .category-title.tech    { background: linear-gradient(135deg, #6c3483, #9b59b6); }
+
+    .news-item { border-left: 3px solid var(--mid); padding: 10px 14px; margin-bottom: 10px; background: #f4f7fc; border-radius: 6px; }
+    .news-item:last-child { margin-bottom: 0; }
+    .news-headline { font-size: 14px; font-weight: 700; color: var(--dark); margin-bottom: 4px; line-height: 1.4; }
+    .news-meta { font-size: 11px; color: var(--muted); margin-bottom: 6px; }
+    .news-summary { font-size: 13px; color: var(--text); line-height: 1.6; }
+    .news-source { font-size: 11px; font-weight: 700; color: var(--blue); margin-top: 4px; }
+
+    .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
+    .stat-card { background: #fff; border-radius: 10px; padding: 16px 18px; box-shadow: 0 1px 4px rgba(0,0,0,.08); border-top: 4px solid var(--blue); }
+    .stat-card.g { border-top-color: var(--green); }
+    .stat-card.a { border-top-color: var(--amber); }
+    .stat-card.r { border-top-color: var(--red); }
+    .stat-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+    .stat-value { font-size: 20px; font-weight: 700; color: var(--dark); }
+
+    @media (max-width: 700px) { .stat-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .header { padding: 20px 20px 16px; } .body { padding: 20px 20px 36px; } }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <span class="badge">NEWS</span>
+    <h1>News Summary — 08 Jul 2026</h1>
+  </div>
+  <div class="header-meta">Auto-generated from get-news skill · Last 24 hours</div>
+</div>
+
+<div class="body">
+
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="stat-label">🇲🇾 Malaysia</div>
+      <div class="stat-value">2</div>
+    </div>
+    <div class="stat-card g">
+      <div class="stat-label">🌍 Global</div>
+      <div class="stat-value">7</div>
+    </div>
+    <div class="stat-card a">
+      <div class="stat-label">⚔️ Iran-US</div>
+      <div class="stat-value">4</div>
+    </div>
+    <div class="stat-card r">
+      <div class="stat-label">🤖 Tech/AI</div>
+      <div class="stat-value">5</div>
+    </div>
+  </div>
+
+  <div class="news-category">
+    <div class="category-title malaysia">🇲🇾 Malaysia</div>
+    <div class="news-item">
+      <div class="news-headline">Hui Ying clarifies abortion law after Dewan Rakyat remarks spark confusion</div>
+      <div class="news-meta">14:00 MYT · Free Malaysia Today</div>
+      <div class="news-summary">Deputy Women, Family and Community Development Minister Lim Hui Ying clarifies that abortion is legally permitted under Section 312 of the Penal Code where continuing pregnancy poses a risk to a woman's life or physical/mental health. Her earlier remarks about clinics providing "illegal abortion services" had sparked confusion among NGOs and the public.</div>
+      <div class="news-source">Free Malaysia Today</div>
+    </div>
+    <div class="news-item">
+      <div class="news-headline">Cabinet agrees Dewan Rakyat to vet prosecutor candidates</div>
+      <div class="news-meta">13:57 MYT · Free Malaysia Today</div>
+      <div class="news-summary">The Cabinet has agreed to amend the Constitutional Bill to allow the Dewan Rakyat to vet prosecutor candidates through a special parliamentary committee, taking into account feedback from government and opposition MPs as well as legal experts.</div>
+      <div class="news-source">Free Malaysia Today</div>
+    </div>
+  </div>
+
+  <div class="news-category">
+    <div class="category-title global">🌍 Global</div>
+    <div class="news-item">
+      <div class="news-headline">Trump lands in Turkey for NATO Summit – lashes out at partners, offers Ukraine Patriot systems</div>
+      <div class="news-meta">4 hrs ago · NYT / BBC</div>
+      <div class="news-summary">President Trump arrived in Ankara for the NATO summit, immediately shifting the center of gravity. He assailed partners for not joining the Iran war but offered Ukraine long-sought authority on Patriot defense systems. PM Starmer announced £37bn for a new allied missile project.</div>
+      <div class="news-source">NYT / BBC</div>
+    </div>
+    <div class="news-item">
+      <div class="news-headline">Eight killed after landslide hits girls' school in Bangladesh</div>
+      <div class="news-meta">25 mins ago · BBC</div>
+      <div class="news-summary">Rescuers pulled bodies from the mud after heavy monsoon rains battered the south-eastern coast of Bangladesh, causing a landslide that struck a girls' school.</div>
+      <div class="news-source">BBC</div>
+    </div>
+    <div class="news-item">
+      <div class="news-headline">German doctor jailed for life for murdering 15 patients</div>
+      <div class="news-meta">1 hr ago · BBC</div>
+      <div class="news-summary">A German palliative care doctor was sentenced to life imprisonment for killing 15 patients (12 women, 3 men) between September 2021 and July 2024.</div>
+      <div class="news-source">BBC</div>
+    </div>
+    <div class="news-item">
+      <div class="news-headline">Marine Le Pen defiant after court ruling – launches presidential campaign</div>
+      <div class="news-meta">11 hrs ago · BBC</div>
+      <div class="news-summary">Within hours of a court of appeal confirming a guilty verdict, Marine Le Pen launched her presidential campaign and said she would attempt to appeal the embezzlement conviction.</div>
+      <div class="news-source">BBC</div>
+    </div>
+    <div class="news-item">
+      <div class="news-headline">Trains and emergency calls affected after major outage at Australia's largest telecoms company</div>
+      <div class="news-meta">7 hrs ago · BBC</div>
+      <div class="news-summary">Servers at data centres in Sydney and Melbourne were to blame but the exact cause remains unknown. The outage affected trains and emergency call services across Australia.</div>
+      <div class="news-source">BBC</div>
+    </div>
+    <div class="news-item">
+      <div class="news-headline">Cubans protest after third nationwide power cut this year</div>
+      <div class="news-meta">Today · BBC</div>
+      <div class="news-summary">While Cuban officials said power had been mostly restored, those still left in the dark vented their anger in protests.</div>
+      <div class="news-source">BBC</div>
+    </div>
+    <div class="news-item">
+      <div class="news-headline">Nigeria's president demands to know how fake agency was allegedly set up in his office</div>
+      <div class="news-meta">1 hr ago · BBC</div>
+      <div class="news-summary">Adeniyi Adeyemi allegedly forged a letter of appointment and secured funding for a fake agency the presidency knew nothing about.</div>
+      <div class="news-source">BBC</div>
+    </div>
+  </div>
+
+  <div class="news-category">
+    <div class="category-title iranus">⚔️ Iran-US Conflict</div>
+    <div class="news-item">
+      <div class="news-headline">Trump says ceasefire is 'over' after US and Iran trade strikes</div>
+      <div class="news-meta">3 hrs ago · NYT / BBC</div>
+      <div class="news-summary">"I think it's over," President Trump said, referring to the preliminary truce, and threatened to strike Iran again. Speaking ahead of the NATO summit, he said US negotiators can keep talking with the Iranians "if they want." The two sides traded attacks as their truce appeared to edge closer to collapse.</div>
+      <div class="news-source">NYT / BBC</div>
+    </div>
+    <div class="news-item">
+      <div class="news-headline">US strikes target Iranian military boats in Strait of Hormuz</div>
+      <div class="news-meta">9 hrs ago · BBC</div>
+      <div class="news-summary">The US launched strikes on Iranian military boats in response to attacks on three oil tankers in the Strait of Hormuz, escalating tensions in the critical waterway.</div>
+      <div class="news-source">BBC</div>
+    </div>
+    <div class="news-item">
+      <div class="news-headline">Oil prices jump as US and Iran resume strikes</div>
+      <div class="news-meta">Today · NYT</div>
+      <div class="news-summary">Oil prices jumped sharply as the US and Iran resumed military strikes, raising concerns about supply disruptions in the Middle East.</div>
+      <div class="news-source">NYT</div>
+    </div>
+    <div class="news-item">
+      <div class="news-headline">Resistance and revenge – Iran's farewell to Khamenei as political spectacle</div>
+      <div class="news-meta">Today · BBC</div>
+      <div class="news-summary">Three days of public mourning in Tehran was a political spectacle Iran's leaders wanted the world to see. Huge crowds lined the streets for the funeral procession of Iran's late supreme leader, Ayatollah Ali Khamenei.</div>
+      <div class="news-source">BBC</div>
+    </div>
+  </div>
+
+  <div class="news-category">
+    <div class="category-title tech">🤖 Technology & AI</div>
+    <div class="news-item">
+      <div class="news-headline">Meta unveils Muse Image — AI image generator for Instagram and WhatsApp</div>
+      <div class="news-meta">07 Jul 2026 · NYT</div>
+      <div class="news-summary">Meta's Muse Image can create realistic photos for users on Instagram and WhatsApp, marking the company's latest attempt to catch up in the global AI race.</div>
+      <div class="news-source">NYT</div>
+    </div>
+    <div class="news-item">
+      <div class="news-headline">Why AI distillation has become a hot topic in the race with China</div>
+      <div class="news-meta">06 Jul 2026 · NYT</div>
+      <div class="news-summary">US companies complain that competitors in China are unfairly copying their AI systems using the distillation technique that has been around for years, involving companies like Anthropic, OpenAI, DeepSeek, and Alibaba.</div>
+      <div class="news-source">NYT</div>
+    </div>
+    <div class="news-item">
+      <div class="news-headline">DuckDuckGo browser now blocks YouTube video ads</div>
+      <div class="news-meta">Today · BleepingComputer</div>
+      <div class="news-summary">DuckDuckGo announced its browser can now block most video ads on YouTube, including pre-roll and mid-roll advertisements.</div>
+      <div class="news-source">BleepingComputer</div>
+    </div>
+    <div class="news-item">
+      <div class="news-headline">Japanese telco giant KDDI says data breach affects over 12 million people</div>
+      <div class="news-meta">Today · BleepingComputer</div>
+      <div class="news-summary">Japanese telecom giant KDDI reported that millions of people had their email addresses and passwords exposed after attackers breached an email platform used by five ISPs in the country.</div>
+      <div class="news-source">BleepingComputer</div>
+    </div>
+    <div class="news-item">
+      <div class="news-headline">CISA orders federal agencies to patch actively exploited Langflow auth bypass flaw</div>
+      <div class="news-meta">Today · BleepingComputer</div>
+      <div class="news-summary">CISA gave US federal agencies until Friday to patch an actively exploited vulnerability in the Langflow visual framework for building AI agents.</div>
+      <div class="news-source">BleepingComputer</div>
+    </div>
+  </div>
+
+  <div style="text-align:center;padding:20px 36px;font-size:12px;color:var(--muted);border-top:1px solid var(--mid);margin-top:8px">
+    Generated by OpenClaw get-news skill · <span id="gen-time"></span>
+  </div>
+</div>
+
+<script>
+  document.getElementById('gen-time').textContent = new Date().toLocaleString('en-MY', {timeZone:'Asia/Kuala_Lumpur'});
+</script>
+</body>
+</html>
