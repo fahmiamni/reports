@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-07-17T22:29:34Z",
+  "lastUpdated": "2026-07-17T23:24:23Z",
   "repos": [
     {
       "owner": "anomalyco",
       "repo": "opencode",
-      "stars": 186923,
+      "stars": 186931,
       "forks": 23466,
       "description": "The open source coding agent."
     },
@@ -18,16 +18,16 @@
     {
       "owner": "NousResearch",
       "repo": "hermes-agent",
-      "stars": 216438,
-      "forks": 40553,
+      "stars": 216449,
+      "forks": 40558,
       "description": "The agent that grows with you"
     },
     {
       "owner": "HKUDS",
       "repo": "nanobot",
-      "stars": 0,
-      "forks": 0,
-      "description": "Unavailable (HTTP 403)"
+      "stars": 45818,
+      "forks": 8092,
+      "description": "Lightweight, open-source AI agent for your tools, chats, and workflows."
     }
   ]
 }
