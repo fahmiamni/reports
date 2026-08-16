@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-16T22:55:27Z",
+  "lastUpdated": "2026-08-16T23:10:52Z",
   "repos": [
     {
       "owner": "anomalyco",
@@ -11,7 +11,7 @@
     {
       "owner": "openclaw",
       "repo": "openclaw",
-      "stars": 386465,
+      "stars": 386466,
       "forks": 81209,
       "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 "
     },
@@ -19,7 +19,7 @@
       "owner": "NousResearch",
       "repo": "hermes-agent",
       "stars": 231481,
-      "forks": 46044,
+      "forks": 46045,
       "description": "The agent that grows with you"
     },
     {
