@@ -1,11 +1,11 @@
 {
-  "lastUpdated": "2026-08-18T21:19:13Z",
+  "lastUpdated": "2026-08-18T21:43:51Z",
   "repos": [
     {
       "owner": "anomalyco",
       "repo": "opencode",
-      "stars": 198817,
-      "forks": 25639,
+      "stars": 198820,
+      "forks": 25640,
       "description": "The open source coding agent."
     },
     {
@@ -18,8 +18,8 @@
     {
       "owner": "NousResearch",
       "repo": "hermes-agent",
-      "stars": 232507,
-      "forks": 46392,
+      "stars": 232513,
+      "forks": 46395,
       "description": "The agent that grows with you"
     },
     {
