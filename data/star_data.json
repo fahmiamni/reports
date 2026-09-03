@@ -1,32 +1,32 @@
 {
-  "lastUpdated": "2026-09-03T17:11:48Z",
+  "lastUpdated": "2026-09-03T19:49:07Z",
   "repos": [
     {
       "owner": "anomalyco",
       "repo": "opencode",
-      "stars": 203491,
-      "forks": 26544,
+      "stars": 203520,
+      "forks": 26550,
       "description": "The open source coding agent."
     },
     {
       "owner": "openclaw",
       "repo": "openclaw",
-      "stars": 388745,
-      "forks": 81632,
+      "stars": 388749,
+      "forks": 81635,
       "description": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞 "
     },
     {
       "owner": "NousResearch",
       "repo": "hermes-agent",
-      "stars": 240671,
-      "forks": 49279,
+      "stars": 240742,
+      "forks": 49304,
       "description": "The agent that grows with you"
     },
     {
       "owner": "HKUDS",
       "repo": "nanobot",
-      "stars": 47689,
-      "forks": 8416,
+      "stars": 47691,
+      "forks": 8418,
       "description": "Ultra-lightweight, open-source, self-hosted personal AI agent framework in Python with WebUI, tools, memory, MCP, multi-agent workflows, automation, and chat apps"
     }
   ]
