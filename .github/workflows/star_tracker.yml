@@ -29,6 +29,7 @@ jobs:
             "NousResearch/hermes-agent"
             "HKUDS/nanobot"
             "odysseus-dev/odysseus"
+            "deepseek-ai/deepseek-harness"
           )
 
           DATA='[]'

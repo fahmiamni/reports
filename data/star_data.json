@@ -35,6 +35,13 @@
       "stars": 86908,
       "forks": 813,
       "description": "Self-hosted AI workspace. "
+    },
+    {
+      "owner": "deepseek-ai",
+      "repo": "deepseek-harness",
+      "stars": 213895,
+      "forks": 25165,
+      "description": "DeepSeek Harness: Everything is a Plugin."
     }
   ]
 }
