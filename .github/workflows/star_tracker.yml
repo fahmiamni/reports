@@ -28,6 +28,7 @@ jobs:
             "openclaw/openclaw"
             "NousResearch/hermes-agent"
             "HKUDS/nanobot"
+            "odysseus-dev/odysseus"
           )
 
           DATA='[]'
