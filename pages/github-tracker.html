@@ -463,7 +463,7 @@
     // ── Fetch Star Data (from static JSON) ──
     async function fetchStarData() {
       try {
-        const res = await fetch(DATA_URL);
+        const res = await fetch(DATA_URL, { cache: 'no-store' });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const json = await res.json();
         if (!json || !json.repos || !Array.isArray(json.repos)) {
