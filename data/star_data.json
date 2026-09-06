@@ -1,45 +1,45 @@
 {
-  "lastUpdated": "2026-09-06T21:43:36Z",
+  "lastUpdated": "2026-09-06T23:10:16Z",
   "repos": [
     {
       "owner": "anomalyco",
       "repo": "opencode",
-      "stars": 205194,
-      "forks": 26769,
+      "stars": 205232,
+      "forks": 26770,
       "description": "The open source coding agent."
     },
     {
       "owner": "openclaw",
       "repo": "openclaw",
-      "stars": 389043,
-      "forks": 81746,
+      "stars": 389048,
+      "forks": 81747,
       "description": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞 "
     },
     {
       "owner": "NousResearch",
       "repo": "hermes-agent",
-      "stars": 242503,
-      "forks": 49864,
+      "stars": 242519,
+      "forks": 49872,
       "description": "The agent that grows with you"
     },
     {
       "owner": "HKUDS",
       "repo": "nanobot",
-      "stars": 47770,
+      "stars": 47772,
       "forks": 8436,
       "description": "Ultra-lightweight, open-source, self-hosted personal AI agent framework in Python with WebUI, tools, memory, MCP, multi-agent workflows, automation, and chat apps"
     },
     {
       "owner": "odysseus-dev",
       "repo": "odysseus",
-      "stars": 86918,
+      "stars": 86919,
       "forks": 815,
       "description": "Self-hosted AI workspace. "
     },
     {
       "owner": "deepseek-ai",
       "repo": "deepseek-harness",
-      "stars": 213959,
+      "stars": 213978,
       "forks": 25178,
       "description": "DeepSeek Harness: Everything is a Plugin."
     }
