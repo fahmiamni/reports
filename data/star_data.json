@@ -1,47 +1,47 @@
 {
-  "lastUpdated": "2026-09-29T21:01:43Z",
+  "lastUpdated": "2026-09-30T00:23:23Z",
   "repos": [
     {
       "owner": "anomalyco",
       "repo": "opencode",
-      "stars": 210898,
-      "forks": 27930,
-      "description": "The open source coding agent."
+      "stars": 0,
+      "forks": 0,
+      "description": "Unavailable (HTTP 403)"
     },
     {
       "owner": "openclaw",
       "repo": "openclaw",
-      "stars": 390795,
-      "forks": 82191,
-      "description": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞 "
+      "stars": 0,
+      "forks": 0,
+      "description": "Unavailable (HTTP 403)"
     },
     {
       "owner": "NousResearch",
       "repo": "hermes-agent",
-      "stars": 250043,
-      "forks": 53361,
-      "description": "The agent that grows with you"
+      "stars": 0,
+      "forks": 0,
+      "description": "Unavailable (HTTP 403)"
     },
     {
       "owner": "HKUDS",
       "repo": "nanobot",
-      "stars": 48678,
-      "forks": 8601,
-      "description": "Ultra-lightweight, open-source, self-hosted personal AI agent framework in Python with WebUI, tools, memory, MCP, multi-agent workflows, automation, and chat apps"
+      "stars": 0,
+      "forks": 0,
+      "description": "Unavailable (HTTP 403)"
     },
     {
       "owner": "odysseus-dev",
       "repo": "odysseus",
-      "stars": 87703,
-      "forks": 1008,
-      "description": "Self-hosted AI workspace. "
+      "stars": 0,
+      "forks": 0,
+      "description": "Unavailable (HTTP 403)"
     },
     {
       "owner": "deepseek-ai",
       "repo": "deepseek-harness",
-      "stars": 239936,
-      "forks": 28810,
-      "description": "DeepSeek Harness: Everything is a Plugin."
+      "stars": 0,
+      "forks": 0,
+      "description": "Unavailable (HTTP 403)"
     }
   ]
 }
