@@ -2,8 +2,8 @@ name: Star Tracker
 
 on:
   schedule:
-    # Every 15 minutes — well within GitHub's 60k exec/month free limit
-    - cron: '*/15 * * * *'
+    # Daily at 22:00 UTC = 06:00 Malaysia time (MYT) — aligns with Fahmi's morning brief
+    - cron: '0 22 * * *'
   workflow_dispatch:  # Manual trigger
   push:
     paths:
