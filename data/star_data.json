@@ -1,18 +1,18 @@
 {
-  "lastUpdated": "2026-10-12T03:55:07Z",
+  "lastUpdated": "2026-10-13T02:56:08Z",
   "repos": [
     {
       "owner": "anomalyco",
       "repo": "opencode",
-      "stars": 212768,
-      "forks": 28476,
+      "stars": 212981,
+      "forks": 28538,
       "description": "The open source coding agent."
     },
     {
       "owner": "openclaw",
       "repo": "openclaw",
-      "stars": 391711,
-      "forks": 82366,
+      "stars": 391808,
+      "forks": 82380,
       "description": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞 "
     },
     {
